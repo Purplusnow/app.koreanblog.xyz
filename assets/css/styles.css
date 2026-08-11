@@ -95,6 +95,11 @@ a{color:inherit;text-decoration:none}
 .card-desc{color:var(--muted);font-size:14.5px;white-space:pre-line;margin:0}
 .card-desc.clamped{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 .read-toggle{align-self:flex-start;margin-top:8px;background:none;border:none;color:var(--accent);font-weight:650;font-size:13.5px;cursor:pointer;padding:2px 0;font-family:inherit}
+.shots{display:flex;gap:8px;overflow-x:auto;margin:12px 0 2px;padding-bottom:6px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.shots img{height:190px;width:auto;flex:none;border-radius:11px;border:1px solid var(--line);background:var(--card-2);scroll-snap-align:start}
+.shots::-webkit-scrollbar{height:6px}
+.shots::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:3px}
+.shots::-webkit-scrollbar-track{background:transparent}
 .card-foot{margin-top:auto;padding-top:16px}
 
 /* Play button */

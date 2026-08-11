@@ -57,6 +57,20 @@ def app_localized(app, code):
     return app["i18n"].get(code) or app["i18n"]["en"]
 
 
+def shots_html(app):
+    d = os.path.join(ROOT, "assets", "img", "apps", app["id"])
+    if not os.path.isdir(d):
+        return ""
+    files = sorted(f for f in os.listdir(d) if f.startswith("shot") and f.endswith(".png"))
+    if not files:
+        return ""
+    imgs = "".join(
+        f'<img src="/assets/img/apps/{app["id"]}/{f}" alt="" loading="lazy" decoding="async">'
+        for f in files
+    )
+    return f'\n        <div class="shots" aria-hidden="true">{imgs}</div>'
+
+
 def card_html(app, loc, code):
     txt = app_localized(app, code)
     is_soon = app["status"] == "soon"
@@ -87,7 +101,7 @@ def card_html(app, loc, code):
           </div>
         </div>
         {tag_block}
-        {desc_block}
+        {desc_block}{shots_html(app)}
         <div class="card-foot">
           <a class="btn btn-play" href="{esc(app["playUrl"])}" target="_blank" rel="noopener">{PLAY_SVG}<span>{esc(cta)}</span></a>
         </div>
