@@ -1,4 +1,323 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://app.koreanblog.xyz/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://app.koreanblog.xyz/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/it/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/id/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/vi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/th/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/hi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
+  <url>
+    <loc>https://app.koreanblog.xyz/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://app.koreanblog.xyz/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://app.koreanblog.xyz/ko/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://app.koreanblog.xyz/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://app.koreanblog.xyz/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://app.koreanblog.xyz/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://app.koreanblog.xyz/pt/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://app.koreanblog.xyz/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://app.koreanblog.xyz/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://app.koreanblog.xyz/it/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://app.koreanblog.xyz/ru/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://app.koreanblog.xyz/id/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://app.koreanblog.xyz/vi/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://app.koreanblog.xyz/th/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://app.koreanblog.xyz/hi/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://app.koreanblog.xyz/ar/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://app.koreanblog.xyz/tr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://app.koreanblog.xyz/"/>
+  </url>
 </urlset>
