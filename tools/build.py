@@ -12,6 +12,10 @@ import json, os, html, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://app.koreanblog.xyz"
 
+# Google Search Console "HTML tag" verification. Paste only the content value
+# (the token), e.g. "abcd1234..."; leave "" to omit. Applied to every page.
+SITE_VERIFICATION = ""
+
 # site locale -> BCP-47 hreflang tag
 HREFLANG = {
     "en": "en", "ko": "ko", "ja": "ja", "zh": "zh-Hant", "es": "es",
@@ -182,6 +186,7 @@ def page_html(data, ui, code):
   </section>'''
 
     redirect = ROOT_REDIRECT if code == "en" else ""
+    verify = f'\n<meta name="google-site-verification" content="{esc(SITE_VERIFICATION)}">' if SITE_VERIFICATION else ""
 
     return f'''<!DOCTYPE html>
 <html lang="{lang_attr}" dir="{d}">
@@ -189,7 +194,7 @@ def page_html(data, ui, code):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
-<meta name="description" content="{esc(desc)}">
+<meta name="description" content="{esc(desc)}">{verify}
 <link rel="canonical" href="{canonical}">
 {hreflang_links(order)}
 <meta property="og:type" content="website">
