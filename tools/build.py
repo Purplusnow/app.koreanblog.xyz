@@ -186,8 +186,9 @@ def page_html(data, ui, code):
     desc = loc["hero_sub"]
     canonical = url_for(code)
 
-    live = [a for a in data["apps"] if a["status"] == "live"]
-    soon = [a for a in data["apps"] if a["status"] == "soon"]
+    ordered = sorted(data["apps"], key=lambda a: a.get("installs", 0), reverse=True)
+    live = [a for a in ordered if a["status"] == "live"]
+    soon = [a for a in ordered if a["status"] == "soon"]
     live_cards = "\n".join(card_html(a, loc, code) for a in live)
     soon_cards = "\n".join(card_html(a, loc, code) for a in soon)
     soon_section = ""
