@@ -92,7 +92,8 @@
      "desc": "Pocket Arcade, WiFi bağlantısı olmadan istediğiniz zaman oynayabileceğiniz hızlı çevrimdışı mini oyunlardan oluşan bir koleksiyondur.\n\nKısa oyun seansları ve kolay tekrar oynanabilirlik için tasarlanmış, sürekli büyüyen bir arcade, bulmaca, zamanlama, refleks ve zeka oyunları kütüphanesine dalın. İster hızlı tepki gerektiren bir meydan okuma, ister klasik sayı bulmacaları, ister sonsuz arcade koşuları veya masa oyunu tarzı strateji oyunları isteyin, Pocket Arcade size tek bir uygulamada çeşitli basit oyunlar sunar.\n\nMevcut oyun türleri şunlardır:\n• refleks ve tepki oyunları\n• zamanlama ve dokunma zorlukları\n• sayı ve bulmaca oyunları\n• arcade koşu ve hayatta kalma oyunları\n• klasik strateji masa oyunları\n\nÖzellikler:\n• çevrimdışı oynama\n• hızlı oyun seansları\n• basit kontroller\n• temiz modern arayüz\n• parlak retro esintili stil\n• isteğe bağlı reklam kaldırma satın alma\n\nPocket Arcade, hızlı bir mola, kısa bir meydan okuma veya yeni bir yüksek skor denemesi için istedikleri zaman açabilecekleri hafif oyunlar isteyen oyuncular için tasarlanmıştır.\n\nZamanla daha fazla oyun eklenmeye devam edecektir."
     }
    },
-   "installs": 146
+   "installs": 146,
+   "downloads": 500
   },
   {
    "id": "facelapse",
@@ -184,7 +185,8 @@
      "desc": "Kaç yaşında görünüyorsunuz? Bir selfie çekin ve FaceLapse anında, cihazınızda, saniyeler içinde yaşınızı tahmin etsin.\n\nAncak FaceLapse sadece tek seferlik bir tahmin değil. Her gün bir selfie çekin ve uygulama sessizce kendi yüz zaman çizelgenizi oluştursun. Geri oynatın ve kendinizin hızlı bir zaman atlamasıyla nasıl değiştiğini izleyin.\n\nNELER YAPABİLİRSİNİZ\n• Tek bir fotoğraftan anında yapay zeka yaş tahmini alın\n• Yüz kılavuzu ve sessiz otomatik çekim özellikli akıllı kamera\n• Günlük kayıt tutun — özel, günde bir tane\n• Gürültü azaltma özelliğiyle yaş trendi grafiğinizi görün\n• Hızlandırılmış çekiminizi oynatın ve zaman içindeki değişimi izleyin\n• Kayıtlarınızı istediğiniz zaman yedekleyin ve geri yükleyin\n• 16 dilde mevcuttur\n\nDAHA GÜÇLÜ ÖZELLİKLER\n• Yüz hizalı hızlandırılmış çekim — gözleriniz sabit kalır, böylece yalnızca gerçek değişiklikler gösterilir\n• Hızlandırılmış çekiminizi GIF olarak dışa aktarın\n• Gelişmiş analizler — yaşlanma hızı özeti ve ilk-son karşılaştırması\n• Reklamsız deneyim\n\nTASARIM GEREĞİ ÖZEL\nFotoğraflarınız tamamen cihazınızda analiz edilir ve asla yüklenmez. Geçmişiniz uygulamanın özel depolama alanında kalır — galerinizde değil. Hiçbir şey hiçbir sunucuya gönderilmez."
     }
    },
-   "installs": 55
+   "installs": 55,
+   "downloads": 100
   },
   {
    "id": "privatecamera",
@@ -276,7 +278,8 @@
      "desc": "Fotoğraf ve videolarınız yalnızca size kalsın. Gizli Kamera; çekimden depolamaya kadar gizliliği önceliklendirerek tasarlandı.\n\n■ Güvenli, kilitli kasa\n• Fotoğraf ve videolar telefon galerisine asla kaydedilmez; uygulama içinde AES-256 ile şifrelenir.\n• PIN'in yanı sıra parmak izi veya yüz ile kilitleyin. Kasa her açılışında kimlik doğrulama ister.\n• Ekran görüntüleri ve son uygulamalar önizlemesi engellenir.\n\n■ Profesyonel kamera\n• Sessiz çekim (desteklenen cihazlarda)\n• Zamanlayıcı, seri çekim ve gece modu iyileştirmesi\n• Belge tarama, otomatik hizalama, ızgara ve tesviye\n• Odak/pozlama kilidi ve meta verisiz (konum/EXIF) çekim\n\n■ Güçlü düzenleme\n• Üst düzey filtreler ve ince ayarlar: pozlama, kontrast, doygunluk, sıcaklık, keskinlik, gren ve daha fazlası.\n\n■ Güvenli yedekleme\n• Tüm kasanızı tek bir şifreli dosya olarak yedekleyin ve istediğiniz yere kaydedin: herhangi bir bulut veya yerel depolama. PIN'iniz olmadan çözülemez.\n\n■ Temiz deneyim\n• Reklam yok, veri toplama yok, hesap yok. Tek satın alma ile her şey açılır."
     }
    },
-   "installs": 2
+   "installs": 2,
+   "downloads": 10
   },
   {
    "id": "btcreport",
@@ -368,7 +371,8 @@
      "desc": "BTC Raporu, Bitcoin piyasa trendlerini hızlı bir şekilde kontrol etmenize yardımcı olmak için tasarlanmış bir analiz raporu uygulamasıdır.\n\nGünlük, 4 saatlik ve 1 saatlik grafiklere dayalı fiyat trendlerini tek bir ekranda görüntüleyebilir, önemli destek ve direnç çizgilerini, RSI'yı, işlem hacmini ve çeşitli senaryolara dayalı bakış açılarını inceleyebilirsiniz.\n\nTemel Özellikler\n- BTC/USDT'ye dayalı piyasa raporları sunar\n- Günlük, 4 saatlik ve 1 saatlik grafikler görüntüler\n- Önemli destek, direnç ve geçersiz kılma fiyat seviyelerinin özetini sunar\n- Boğa, ayı ve nötr senaryolara dayalı bakış açıları sunar\n- Strateji fikirlerini ve piyasa durumunu kontrol eder\n- En son raporlara doğrudan uygulama içinden erişin\n\nBTC Raporu, kesin piyasa tahminleri yapmak yerine, önemli fiyat seviyelerine ve koşullarına dayalı mevcut trendleri incelemenize yardımcı olmak için tasarlanmış, referans amaçlı bir analiz aracıdır.\n\nBu uygulamanın içeriği yatırım tavsiyesi niteliğinde değildir ve tüm yatırım kararları ve sorumlulukları tamamen yatırımcıya aittir."
     }
    },
-   "installs": 2
+   "installs": 2,
+   "downloads": 5
   },
   {
    "id": "fxcalc",
@@ -460,7 +464,8 @@
      "desc": "FX WebView, mobil cihazlarda fx.koreanblog.xyz döviz çeviricisine kolay erişim sağlayan bir uygulamadır.\n\nÇeşitli para birimlerini seçin, miktarları girin ve en son döviz kurlarına göre dönüşüm sonuçlarını görün.\n\n• Çoklu para birimi desteği\n• Kolay hesaplama yöntemi\n• Mobil cihazlar için optimize edilmiş ekran\n• Hızlı ve sezgisel kullanıcı deneyimi\n\nBu uygulama, fx.koreanblog.xyz tarafından sağlanan döviz kuru hesaplayıcısına mobil cihazlardan kolayca erişmek için tasarlanmış web tabanlı (WebView) bir hizmettir.\n\nReklam içerebilir."
     }
    },
-   "installs": 3
+   "installs": 3,
+   "downloads": 1
   },
   {
    "id": "adrevenue",
@@ -552,7 +557,8 @@
      "desc": "Reklam Geliri Kontrol Paneli, geliştiricilerin ve uygulama yayıncılarının reklam kazançlarını, tahmini gelirlerini, gösterimlerini, tıklamalarını ve performans trendlerini tek bir temiz ve sezgisel arayüzde izlemelerine yardımcı olur.\n\nBağımsız geliştiriciler, oyun geliştiricileri ve uygulama yayıncıları için, gelirlerini her zaman, her yerde hızlı ve kolay bir şekilde kontrol etmek isteyenler için tasarlanmıştır.\n\nÖzellikler:\n- Reklam gelirini ve tahmini kazançları görüntüleme\n- Gösterim ve tıklama verilerini izleme\n- Zaman içindeki performans trendlerini izleme\n- Basit, modern ve kullanımı kolay arayüz\n- Birden fazla reklam hesabını destekler"
     }
    },
-   "installs": 79
+   "installs": 79,
+   "downloads": 100
   },
   {
    "id": "secondact",
@@ -644,7 +650,8 @@
      "desc": "🏙️ İKİNCİ PERDE — Geri dönüşünüz şimdi başlıyor.\n\nOn yıl önce, dünya sizi üç dakikada sildi. Şimdi ikinci perdeniz için zaman geldi.\n\nİşten atıldınız, parasız kaldınız ve gözden çıkarıldınız — küçük bir stüdyo daire ve büyük bir hayalle yeniden başlıyorsunuz. Satın alın, kiralayın, yeniden yatırım yapın. Tek bir odanın, sizi geride bırakan rakibinizi bile geride bırakan bir emlak imparatorluğuna dönüşmesini izleyin.\n\nSecond Act, kısa ve tatmin edici oyun seansları için tasarlanmış, hikaye odaklı bir boşta emlak oyunudur — inşa etmek için dokunun, ardından siz yokken mülklerinizin gelir elde etmesine izin verin.\n\n▶ SIFIRDAN YENİDEN İNŞA EDİN\nTek bir stüdyo ile başlayın ve yükselin — apartmanlar, dükkanlar, oteller, fabrikalar ve görkemli yapılar. Beş bölgede 349 benzersiz bina toplayın.\n\n▶ BOŞTA GELİR, AKTİF EĞLENCE\nOyun kapalıyken bile kiranız gelmeye devam eder. Bir yığın paraya geri dönün ve birer birer binaları ele alarak bir sonraki hamlenizi belirleyin.\n\n▶ RAKİBİNİZİ GERİDE BIRAKIN\nHer anlaşma sizi, sizi dışlayan rakip şirketi geride bırakmaya daha da yaklaştırıyor. Sıradan birinden zengin bir iş adamına doğru sosyal merdiveni tırmanın.\n\n▶ YÖNETİCİLER İŞE ALIN, DAHA AKILLI BÜYÜYÜN\nGeliri artırmak, boşlukları azaltmak ve gayrimenkul değerini yükseltmek için yöneticileri işe alın, siz de büyük resme odaklanın.\n\n▶ YENİDEN BAŞLAMAYA DEĞER BİR HAYAT\nGeri dönüş ve sessiz bir intikam öyküsü yükselişinizin içinden geçiyor. Zirveye ulaşın - sonra daha da yükseğe tırmanmak için yeniden doğun (prestij).\n\n▶ KENDİ TARZINIZDA OYNAYIN\nİnternet gerekmez. Dikey mod, tek el, her zaman. 15 dilde mevcuttur.\n\nİlk perdeniz sona erdi. İkinci perdenizi siz yazıyorsunuz.\n\nŞimdi indirin ve imparatorluğunuzu yeniden kurun. 🏢"
     }
    },
-   "installs": 0
+   "installs": 0,
+   "downloads": 500
   }
  ]
 }

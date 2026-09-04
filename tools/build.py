@@ -186,7 +186,10 @@ def page_html(data, ui, code):
     desc = loc["hero_sub"]
     canonical = url_for(code)
 
-    ordered = sorted(data["apps"], key=lambda a: a.get("installs", 0), reverse=True)
+    # Sort by public Play download bucket, then console installs as tiebreak.
+    ordered = sorted(data["apps"],
+                     key=lambda a: (a.get("downloads", 0), a.get("installs", 0)),
+                     reverse=True)
     live = [a for a in ordered if a["status"] == "live"]
     soon = [a for a in ordered if a["status"] == "soon"]
     live_cards = "\n".join(card_html(a, loc, code) for a in live)
