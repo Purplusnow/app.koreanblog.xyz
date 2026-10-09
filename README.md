@@ -62,6 +62,15 @@ python3 -m http.server 8791
 
 Play에서 16개 로케일 카피를 다시 긁는 스크립트: `tools/fetch_locales.py`.
 
+### 자동 동기화 (매일)
+
+`.github/workflows/sync-apps.yml`이 매일 09:00 KST에 `tools/sync_apps.py`를 실행한다.
+- 개발자 페이지에 새 패키지가 생기면 16개 언어 카피·아이콘·스크린샷·카테고리(Play 장르)·accent(아이콘 색)를 채워 추가.
+- 기존 앱은 공개 다운로드 구간과 live/soon 상태만 갱신 (이름·문구 수동 수정분은 건드리지 않음).
+- 변경이 있으면 `build.py` 후 main에 커밋·푸시 → Pages 자동 배포.
+- 재추가 금지 패키지는 스크립트의 `EXCLUDE`. 새 카테고리 키가 생기면 `data/ui.json`의 `cat` 라벨을 추가할 것.
+- 수동 실행: Actions 탭 → Sync apps from Google Play → Run workflow (로컬: `python3 tools/sync_apps.py --dry-run`).
+
 ## 배포
 
 정적 사이트. GitHub Pages 또는 Cloudflare Pages.

@@ -1,0 +1,42 @@
+name: Sync apps from Google Play
+
+on:
+  schedule:
+    - cron: "0 0 * * *"   # daily 09:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-apps
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pillow
+
+      - name: Sync data/apps.json with Play
+        id: sync
+        run: |
+          python3 tools/sync_apps.py | tee sync.log
+          if grep -q '^CHANGED$' sync.log; then echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Build and push
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          python3 tools/build.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data assets index.html sitemap.xml */index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Sync apps from Google Play" -m "$(grep -v '^CHANGED$' sync.log)"
+          git push
