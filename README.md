@@ -1,6 +1,6 @@
 # app.koreanblog.xyz — Purplusnow app showcase
 
-최종 업데이트: 2026-08-11
+최종 업데이트: 2026-10-09
 
 Purplusnow가 구글플레이에 출시한 앱들을 **16개 언어**로 소개하는 정적 웹사이트.
 
@@ -21,9 +21,9 @@ CNAME                   # app.koreanblog.xyz
 
 **SEO 구조**: 언어별 URL(`/`, `/ko/`, `/ja/` …)에 콘텐츠를 HTML로 직접 구워 넣어 크롤러가 JS 없이 읽음. 각 페이지에 canonical·hreflang(16+x-default)·JSON-LD(SoftwareApplication)·OG 태그. 루트는 브라우저 언어 감지해 해당 언어로 1회 리다이렉트(선택 후 유지). `index.html`/`<lang>/`은 **생성물이라 직접 편집 금지** — `data/`만 고치고 `python3 tools/build.py` 재실행.
 
-## 대상 앱 (7개)
+## 대상 앱 (8개)
 
-출시(프로덕션) 6개 + 사전등록 1개. 플레이 콘솔 상태 기준.
+출시(프로덕션) 8개. 플레이 콘솔 상태 기준.
 
 | 앱 | 패키지 | 상태 |
 |---|---|---|
@@ -33,7 +33,8 @@ CNAME                   # app.koreanblog.xyz
 | Bitcoin Market Report | com.koreanblog.btcreport | live |
 | Currency Converter | com.koreanblog.fxwebview | live |
 | Ad Revenue Dashboard | com.purplusnow.adrevenuecontrol | live |
-| Second Act: Property Tycoon | com.purplusnow.secondactlife | soon (사전등록) |
+| Second Act: Property Tycoon | com.purplusnow.secondactlife | live |
+| Plop Cat: Slide & Jigsaw | com.purplusnow.plopcat | live |
 
 제외: Candy Match 3/Premium(Google 정지·삭제), Flying Bird(삭제), Candy Town 3·Space Bird 2020(미출시).
 

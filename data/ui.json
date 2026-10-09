@@ -41,7 +41,8 @@
     "entertainment": "Entertainment",
     "finance": "Finance",
     "photography": "Photography",
-    "simulation": "Simulation"
+    "simulation": "Simulation",
+    "puzzle": "Puzzle"
    }
   },
   "ko": {
@@ -67,7 +68,8 @@
     "entertainment": "엔터테인먼트",
     "finance": "금융",
     "photography": "사진",
-    "simulation": "시뮬레이션"
+    "simulation": "시뮬레이션",
+    "puzzle": "퍼즐"
    }
   },
   "ja": {
@@ -93,7 +95,8 @@
     "entertainment": "エンタメ",
     "finance": "ファイナンス",
     "photography": "写真",
-    "simulation": "シミュレーション"
+    "simulation": "シミュレーション",
+    "puzzle": "パズル"
    }
   },
   "zh": {
@@ -119,7 +122,8 @@
     "entertainment": "娛樂",
     "finance": "財經",
     "photography": "攝影",
-    "simulation": "模擬"
+    "simulation": "模擬",
+    "puzzle": "益智"
    }
   },
   "es": {
@@ -145,7 +149,8 @@
     "entertainment": "Entretenimiento",
     "finance": "Finanzas",
     "photography": "Fotografía",
-    "simulation": "Simulación"
+    "simulation": "Simulación",
+    "puzzle": "Puzles"
    }
   },
   "pt": {
@@ -171,7 +176,8 @@
     "entertainment": "Entretenimento",
     "finance": "Finanças",
     "photography": "Fotografia",
-    "simulation": "Simulação"
+    "simulation": "Simulação",
+    "puzzle": "Quebra-cabeça"
    }
   },
   "fr": {
@@ -197,7 +203,8 @@
     "entertainment": "Divertissement",
     "finance": "Finance",
     "photography": "Photographie",
-    "simulation": "Simulation"
+    "simulation": "Simulation",
+    "puzzle": "Puzzle"
    }
   },
   "de": {
@@ -223,7 +230,8 @@
     "entertainment": "Unterhaltung",
     "finance": "Finanzen",
     "photography": "Fotografie",
-    "simulation": "Simulation"
+    "simulation": "Simulation",
+    "puzzle": "Puzzle"
    }
   },
   "it": {
@@ -249,7 +257,8 @@
     "entertainment": "Intrattenimento",
     "finance": "Finanza",
     "photography": "Fotografia",
-    "simulation": "Simulazione"
+    "simulation": "Simulazione",
+    "puzzle": "Rompicapo"
    }
   },
   "ru": {
@@ -275,7 +284,8 @@
     "entertainment": "Развлечения",
     "finance": "Финансы",
     "photography": "Фото",
-    "simulation": "Симуляторы"
+    "simulation": "Симуляторы",
+    "puzzle": "Головоломки"
    }
   },
   "id": {
@@ -301,7 +311,8 @@
     "entertainment": "Hiburan",
     "finance": "Keuangan",
     "photography": "Fotografi",
-    "simulation": "Simulasi"
+    "simulation": "Simulasi",
+    "puzzle": "Teka-teki"
    }
   },
   "vi": {
@@ -327,7 +338,8 @@
     "entertainment": "Giải trí",
     "finance": "Tài chính",
     "photography": "Nhiếp ảnh",
-    "simulation": "Mô phỏng"
+    "simulation": "Mô phỏng",
+    "puzzle": "Giải đố"
    }
   },
   "th": {
@@ -353,7 +365,8 @@
     "entertainment": "บันเทิง",
     "finance": "การเงิน",
     "photography": "การถ่ายภาพ",
-    "simulation": "จำลองสถานการณ์"
+    "simulation": "จำลองสถานการณ์",
+    "puzzle": "ปริศนา"
    }
   },
   "hi": {
@@ -379,7 +392,8 @@
     "entertainment": "मनोरंजन",
     "finance": "वित्त",
     "photography": "फ़ोटोग्राफ़ी",
-    "simulation": "सिमुलेशन"
+    "simulation": "सिमुलेशन",
+    "puzzle": "पहेली"
    }
   },
   "ar": {
@@ -405,7 +419,8 @@
     "entertainment": "ترفيه",
     "finance": "مالية",
     "photography": "تصوير",
-    "simulation": "محاكاة"
+    "simulation": "محاكاة",
+    "puzzle": "ألغاز"
    }
   },
   "tr": {
@@ -431,7 +446,8 @@
     "entertainment": "Eğlence",
     "finance": "Finans",
     "photography": "Fotoğrafçılık",
-    "simulation": "Simülasyon"
+    "simulation": "Simülasyon",
+    "puzzle": "Bulmaca"
    }
   }
  }

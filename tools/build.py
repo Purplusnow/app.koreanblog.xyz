@@ -31,7 +31,7 @@ OG_LOCALE = {
 }
 # schema.org applicationCategory
 CAT_SCHEMA = {
-    "arcade": "GameApplication", "simulation": "GameApplication",
+    "arcade": "GameApplication", "simulation": "GameApplication", "puzzle": "GameApplication",
     "finance": "FinanceApplication", "photography": "MultimediaApplication",
     "tools": "UtilitiesApplication", "entertainment": "EntertainmentApplication",
 }
