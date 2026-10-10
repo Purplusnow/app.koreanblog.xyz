@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>앱 지표 — Purplusnow</title>
+<!-- 숨은 페이지: 어디에서도 링크하지 않고 sitemap에도 없다. robots.txt 에서 Disallow. -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="icon" type="image/png" href="/assets/img/apps/facelapse.png">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<script>try{var t=localStorage.getItem('pn_theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<style>
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+  .s-head{padding:28px 0 8px}
+  .s-head h1{margin:0 0 6px;font-size:22px;letter-spacing:-.2px}
+  .s-meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 14px}
+  .s-meta b{color:var(--txt);font-weight:600}
+  .s-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+    gap:14px;padding:16px 0 48px}
+  .s-card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:14px 16px;min-width:0}
+  .s-top{display:flex;align-items:center;gap:10px;margin-bottom:10px;min-width:0}
+  .s-top img{width:38px;height:38px;border-radius:9px;flex:none}
+  .s-name{font-weight:700;font-size:15px;overflow-wrap:anywhere}
+  .s-sub{color:var(--muted-2);font-size:11.5px;overflow-wrap:anywhere}
+  .s-row{display:flex;justify-content:space-between;align-items:baseline;
+    gap:10px;padding:3px 0;font-size:13.5px;min-width:0}
+  .s-k{color:var(--muted);flex:none}
+  .s-v{font-weight:600;font-variant-numeric:tabular-nums;text-align:end;
+    min-width:0;overflow-wrap:anywhere}
+  .s-v.dim{color:var(--muted-2);font-weight:500}
+  .s-best{color:var(--accent,#7aa2ff);font-size:12px;margin-inline-start:6px;white-space:nowrap}
+  .s-chart{margin:2px 0 0;padding:0;list-style:none;text-align:end;
+    font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+  .s-rival{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+  .s-rival .s-label{color:var(--muted);font-size:12px;font-weight:600;
+    margin-bottom:4px;overflow-wrap:anywhere}
+  .spark{display:block;margin-top:10px;max-width:100%;height:auto;opacity:.9}
+  .s-note{color:var(--muted-2);font-size:12px;padding:0 0 40px;line-height:1.6}
+  .s-err{color:#f0604f;font-size:14px;padding:20px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="s-head">
+    <h1>앱 지표</h1>
+    <div class="s-meta" id="meta"></div>
+  </div>
+  <div class="s-grid" id="grid"></div>
+  <p class="s-note">
+    매일 09:30 KST에 <code>tools/sync_metrics.mjs</code>가 갱신한다.
+    설치·평점·평가는 Play 앱 상세 페이지(robots 허용 경로)에서, 차트 진입은 51개국 ×
+    무료·매출 차트 1,020개를 조회해서 받는다. 차트 스캔 커버리지가 98% 미만이면
+    "진입 없음"으로 단정하지 않고 이전 결과를 유지한다.<br>
+    원본: <a href="/data/metrics.json">data/metrics.json</a>
+  </p>
+</div>
+<script>
+(() => {
+  "use strict";
+  const esc = v => String(v).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+  const nf = n => { try { return new Intl.NumberFormat("ko").format(n); } catch(e){ return String(n); } };
+
+  function sparkline(hist, color) {
+    const pts = hist.map(h => h.i ?? 0);
+    if (pts.length < 2) return "";
+    const max = Math.max(...pts), min = Math.min(...pts), span = max - min || 1;
+    const W = 260, H = 36;
+    const d = pts.map((v,i) => {
+      const x = (i/(pts.length-1))*W, y = H - ((v-min)/span)*H;
+      return `${i?"L":"M"}${x.toFixed(1)} ${y.toFixed(1)}`;
+    }).join(" ");
+    return `<svg class="spark" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true">`
+         + `<path d="${d}" fill="none" stroke="${color}" stroke-width="2" `
+         + `stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  }
+
+  function row(k, v, best, dim) {
+    const b = (best != null && best !== v) ? ` <span class="s-best">최고 ${esc(best)}</span>` : "";
+    return `<div class="s-row"><span class="s-k">${esc(k)}</span>`
+         + `<span class="s-v${dim?" dim":""}">${esc(v)}${b}</span></div>`;
+  }
+
+  // null = 아직 스캔 안 됨(행 생략), [] = 완주했고 진입 없음
+  function chart(list, accent) {
+    if (!list) return "";
+    if (!list.length) return row("차트 진입", "진입 없음", null, true);
+    const L = { TOP_FREE:"무료", GROSSING:"매출" };
+    const li = list.slice(0,10).map(h =>
+      `<li>${esc(h.c.toUpperCase())} · ${esc(L[h.coll]||h.coll)} #${nf(h.rank)}</li>`).join("");
+    return row("차트 진입", nf(list.length) + "건")
+         + `<ul class="s-chart" style="color:${accent}">${li}</ul>`;
+  }
+
+  function card(app, e) {
+    const accent = app.accent || "#7aa2ff";
+    const last = e && e.history && e.history[e.history.length-1];
+    const name = (app.i18n && app.i18n.ko && app.i18n.ko.name) || (app.i18n && app.i18n.en && app.i18n.en.name) || app.id;
+    let h = `<div class="s-card" style="--accent:${esc(accent)}">`
+          + `<div class="s-top"><img src="/${esc(app.icon)}" alt="" width="38" height="38" loading="lazy">`
+          + `<div style="min-width:0"><div class="s-name">${esc(name)}</div>`
+          + `<div class="s-sub">${esc(app.package)}</div></div></div>`;
+    if (!last) { return h + `<p class="s-v dim">데이터 없음</p></div>`; }
+    const best = e.best || {};
+    h += row("설치", nf(last.i), best.i && best.i !== last.i ? nf(best.i) : null);
+    h += last.s ? row("평점", last.s.toFixed(2), best.s && best.s !== last.s ? best.s.toFixed(2) : null)
+                : row("평점", "미집계", null, true);
+    if (last.r) h += row("평가", nf(last.r), best.r && best.r !== last.r ? nf(best.r) : null);
+    h += chart(e.chart, accent);
+    h += sparkline(e.history, accent);
+
+    const rv = e.rival, rl = rv && rv.history && rv.history[rv.history.length-1];
+    if (rl) {
+      h += `<div class="s-rival"><div class="s-label">경쟁 앱 · ${esc(rv.label)}</div>`;
+      h += row("설치", nf(rl.i));
+      if (rl.s) h += row("평점", rl.s.toFixed(2));
+      h += chart(rv.chart, "var(--muted)");
+      h += sparkline(rv.history, "var(--muted)") + `</div>`;
+    }
+    return h + `</div>`;
+  }
+
+  async function load() {
+    const grid = document.getElementById("grid"), meta = document.getElementById("meta");
+    let apps, m;
+    try {
+      const [a, b] = await Promise.all([
+        fetch("/data/apps.json", {cache:"no-cache"}),
+        fetch("/data/metrics.json", {cache:"no-cache"}),
+      ]);
+      if (!a.ok || !b.ok) throw new Error(`apps=${a.status} metrics=${b.status}`);
+      apps = (await a.json()).apps;
+      m = await b.json();
+    } catch (err) {
+      grid.innerHTML = `<p class="s-err">불러오지 못했다: ${esc(err.message)}</p>`;
+      return;
+    }
+
+    const up = m.updated ? new Date(m.updated).toLocaleString("ko-KR") : "?";
+    const c = m.chart;
+    meta.innerHTML = `<span>갱신 <b>${esc(up)}</b></span>`
+      + `<span>추적 시작 <b>${esc(m.since||"?")}</b></span>`
+      + (c ? `<span>차트 스캔 <b>${esc(c.scannedAt)}</b> · ${esc(c.countries)}개국 · 커버리지 ${Math.round(c.coverage*100)}%</span>`
+           : `<span class="dim">차트 스캔 없음</span>`);
+
+    // 설치 수 내림차순 — 큰 앱이 위로
+    const sorted = apps.slice().sort((x, y) => {
+      const gi = id => { const e = m.apps && m.apps[id]; const h = e && e.history; return h && h.length ? (h[h.length-1].i||0) : -1; };
+      return gi(y.id) - gi(x.id);
+    });
+    grid.innerHTML = sorted.map(a => card(a, m.apps && m.apps[a.id])).join("");
+  }
+  load();
+})();
+</script>
+</body>
+</html>
