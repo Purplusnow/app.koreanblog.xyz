@@ -330,6 +330,14 @@ def main():
         f.write(sitemap(order))
     print(f"Built {len(order)} pages + sitemap ({len(order)} urls).")
 
+    # 산출물 자가검증: `hidden` 이 author CSS 의 display 지정에 무력화되지 않았는지.
+    # 2026-10-10에 지표 버튼이 이 함정으로 전 방문자에게 노출됐다.
+    from check_hidden import main as check_hidden
+    if check_hidden() != 0:
+        raise SystemExit("빌드 중단: hidden 무결성 검사 실패")
+
 
 if __name__ == "__main__":
+    import sys, os as _os
+    sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
     main()
