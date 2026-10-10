@@ -1,0 +1,12 @@
+{
+  "name": "app-koreanblog-xyz",
+  "private": true,
+  "type": "module",
+  "description": "Purplusnow 앱 쇼케이스 — 지표 수집기",
+  "scripts": {
+    "metrics": "node tools/sync_metrics.mjs"
+  },
+  "dependencies": {
+    "google-play-scraper": "^10.0.0"
+  }
+}

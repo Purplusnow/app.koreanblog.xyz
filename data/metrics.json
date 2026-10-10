@@ -1,0 +1,154 @@
+{
+ "updated": "2026-10-10T01:24:55.474Z",
+ "since": "2026-10-10",
+ "apps": {
+  "pocketarcade": {
+   "history": [
+    {
+     "d": "2026-10-10",
+     "i": 841,
+     "s": null,
+     "r": 0,
+     "v": 0
+    }
+   ],
+   "best": {
+    "i": 841,
+    "s": null,
+    "r": 0
+   },
+   "rival": null
+  },
+  "facelapse": {
+   "history": [
+    {
+     "d": "2026-10-10",
+     "i": 159,
+     "s": null,
+     "r": 0,
+     "v": 0
+    }
+   ],
+   "best": {
+    "i": 159,
+    "s": null,
+    "r": 0
+   },
+   "rival": null
+  },
+  "privatecamera": {
+   "history": [
+    {
+     "d": "2026-10-10",
+     "i": 32,
+     "s": null,
+     "r": 0,
+     "v": 0
+    }
+   ],
+   "best": {
+    "i": 32,
+    "s": null,
+    "r": 0
+   },
+   "rival": null
+  },
+  "btcreport": {
+   "history": [
+    {
+     "d": "2026-10-10",
+     "i": 24,
+     "s": null,
+     "r": 0,
+     "v": 0
+    }
+   ],
+   "best": {
+    "i": 24,
+    "s": null,
+    "r": 0
+   },
+   "rival": null
+  },
+  "fxcalc": {
+   "history": [
+    {
+     "d": "2026-10-10",
+     "i": 2,
+     "s": null,
+     "r": 0,
+     "v": 0
+    }
+   ],
+   "best": {
+    "i": 2,
+    "s": null,
+    "r": 0
+   },
+   "rival": null
+  },
+  "adrevenue": {
+   "history": [
+    {
+     "d": "2026-10-10",
+     "i": 242,
+     "s": null,
+     "r": 0,
+     "v": 0
+    }
+   ],
+   "best": {
+    "i": 242,
+    "s": null,
+    "r": 0
+   },
+   "rival": null
+  },
+  "secondact": {
+   "history": [
+    {
+     "d": "2026-10-10",
+     "i": 18491,
+     "s": 3.63,
+     "r": 65,
+     "v": 3
+    }
+   ],
+   "best": {
+    "i": 18491,
+    "s": 3.63,
+    "r": 65
+   },
+   "rival": null
+  },
+  "plopcat": {
+   "history": [
+    {
+     "d": "2026-10-10",
+     "i": 0,
+     "s": null,
+     "r": 0,
+     "v": 0
+    }
+   ],
+   "best": {
+    "i": 0,
+    "s": null,
+    "r": 0
+   },
+   "rival": {
+    "label": "퐁당냥 (ACTIONFIT)",
+    "pkg": "com.actionfit.plop.cat.aos",
+    "history": [
+     {
+      "d": "2026-10-10",
+      "i": 16676,
+      "s": 4.78,
+      "r": 345,
+      "v": 10
+     }
+    ]
+   }
+  }
+ }
+}

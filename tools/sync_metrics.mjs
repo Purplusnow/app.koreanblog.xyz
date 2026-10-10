@@ -1,0 +1,94 @@
+// 자사 앱 지표 일일 스냅샷 수집기.
+//
+// 수집 경로는 google-play-scraper의 app() = `/store/apps/details`이고
+// 이는 Play robots.txt에서 허용된 경로다(sync_apps.py가 이미 쓰는 것과 동일).
+// 차트 순위(list())와 검색 순위(search())는 각각 `/_/...batchexecute`,
+// `/store/search`를 타고 둘 다 robots Disallow이므로 여기서 수집하지 않는다.
+//
+// 차트 순위를 안 넣는 또 다른 이유: 2026-10-10 실측에서 자사 8개 앱 전부
+// KR 차트 200위 안에 없었다(0/32). 18,491 설치인 secondact도, 16,676 설치인
+// 경쟁 앱도 없다. 이 체급에서 차트 순위는 영구적으로 "—"다.
+
+import gplay from 'google-play-scraper';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+
+const g = gplay.default ?? gplay;
+const ROOT = new URL('..', import.meta.url).pathname;
+const APPS_JSON = `${ROOT}data/apps.json`;
+const OUT = `${ROOT}data/metrics.json`;
+
+// 정면승부 중인 경쟁 앱. 공개 카드에는 안 쓰고 ?stats=1 패널에서만 비교에 쓴다.
+const RIVALS = {
+  plopcat: { pkg: 'com.actionfit.plop.cat.aos', label: '퐁당냥 (ACTIONFIT)' },
+};
+
+const COUNTRY = 'kr', LANG = 'ko';
+const today = new Date().toISOString().slice(0, 10);
+
+async function snap(pkg) {
+  const a = await g.app({ appId: pkg, country: COUNTRY, lang: LANG });
+  return {
+    i: a.maxInstalls ?? 0,                                  // 정확 설치 수
+    s: a.score ? Number(a.score.toFixed(2)) : null,          // 평점
+    r: a.ratings ?? 0,                                       // 평가 수
+    v: a.reviews ?? 0,                                       // 리뷰 수
+  };
+}
+
+const apps = JSON.parse(readFileSync(APPS_JSON, 'utf8')).apps;
+const prev = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : { since: today, apps: {} };
+const out = { updated: new Date().toISOString(), since: prev.since ?? today, apps: {} };
+
+let okCount = 0, failCount = 0;
+for (const app of apps) {
+  const id = app.id;
+  const old = prev.apps?.[id] ?? { history: [], best: null, rival: null };
+  const entry = { history: [...(old.history ?? [])], best: old.best ?? null, rival: old.rival ?? null };
+
+  try {
+    const cur = await snap(app.package);
+    // 같은 날 재실행이면 덮어쓴다 (하루 한 줄 유지)
+    entry.history = entry.history.filter(h => h.d !== today);
+    entry.history.push({ d: today, ...cur });
+    entry.history.sort((a, b) => a.d.localeCompare(b.d));
+
+    // "추적 시작 이후 최고". 과거 데이터는 어디서도 살 수 없으므로
+    // 이 값은 수집을 시작한 날부터만 의미가 있다. UI에 그렇게 표기한다.
+    entry.best = {
+      i: Math.max(...entry.history.map(h => h.i ?? 0)),
+      s: Math.max(...entry.history.map(h => h.s ?? 0)) || null,
+      r: Math.max(...entry.history.map(h => h.r ?? 0)),
+    };
+    okCount++;
+  } catch (e) {
+    console.error(`  ! ${id}: ${e.message.slice(0, 70)}`);
+    failCount++;
+  }
+
+  const rv = RIVALS[id];
+  if (rv) {
+    try {
+      const cur = await snap(rv.pkg);
+      const hist = (entry.rival?.history ?? []).filter(h => h.d !== today);
+      hist.push({ d: today, ...cur });
+      hist.sort((a, b) => a.d.localeCompare(b.d));
+      entry.rival = { label: rv.label, pkg: rv.pkg, history: hist };
+    } catch (e) {
+      console.error(`  ! ${id} rival: ${e.message.slice(0, 70)}`);
+    }
+  }
+
+  out.apps[id] = entry;
+  const last = entry.history.at(-1);
+  console.log(`  ${id.padEnd(14)} 설치 ${String(last?.i ?? '-').padEnd(7)} 평점 ${last?.s ?? '-'} 평가 ${last?.r ?? 0}` +
+              (entry.rival ? `   vs ${entry.rival.label}: 설치 ${entry.rival.history.at(-1).i}, 평점 ${entry.rival.history.at(-1).s}` : ''));
+}
+
+// 수집이 전부 실패했으면 기존 파일을 덮지 않는다 (좋은 데이터를 빈 데이터로 날리지 않기)
+if (okCount === 0) {
+  console.error('수집 전량 실패 — data/metrics.json을 덮지 않고 종료');
+  process.exit(1);
+}
+
+writeFileSync(OUT, JSON.stringify(out, null, 1) + '\n');
+console.log(`\n성공 ${okCount} / 실패 ${failCount}, 추적 시작 ${out.since}, → data/metrics.json`);

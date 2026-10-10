@@ -71,6 +71,16 @@ def shots_html(app):
     return f'\n        <div class="shots" aria-hidden="true">{imgs}</div>'
 
 
+STATS_KEYS = ("stats_title", "stats_installs", "stats_rating", "stats_ratings",
+               "stats_best", "stats_since", "stats_rival", "stats_none")
+
+
+def stats_i18n(loc):
+    """지표 패널 라벨을 JSON으로. </script> 조기 종료만 막으면 된다."""
+    blob = json.dumps({k: loc[k] for k in STATS_KEYS}, ensure_ascii=False)
+    return blob.replace("</", "<\\/")
+
+
 def card_html(app, loc, code):
     txt = app_localized(app, code)
     is_soon = app["status"] == "soon"
@@ -104,7 +114,9 @@ def card_html(app, loc, code):
         {desc_block}{shots_html(app)}
         <div class="card-foot">
           <a class="btn btn-play" href="{esc(app["playUrl"])}" target="_blank" rel="noopener">{PLAY_SVG}<span>{esc(cta)}</span></a>
+          <button class="btn btn-stats" type="button" hidden aria-expanded="false" data-app="{esc(app["id"])}">{esc(loc["stats_btn"])}</button>
         </div>
+        <div class="card-statspanel" hidden data-app="{esc(app["id"])}"></div>
       </article>'''
 
 
@@ -283,6 +295,7 @@ def page_html(data, ui, code):
   </div>
 </footer>
 
+<script id="statsI18n" type="application/json">{stats_i18n(loc)}</script>
 <script src="/assets/js/app.js"></script>
 </body>
 </html>

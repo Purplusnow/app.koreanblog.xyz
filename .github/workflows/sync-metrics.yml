@@ -1,0 +1,46 @@
+# 자사 앱 지표 일일 스냅샷.
+#
+# sync-apps.yml(앱 목록·카피·스크린샷 동기화)과 분리한 이유: 지표는 매일 한 줄씩
+# 쌓여야 추이가 생기는데, 앱 정보는 바뀔 때만 커밋되기 때문이다. 실패해도 서로
+# 영향을 주지 않게 둔다.
+#
+# data/metrics.json은 사이트 빌드와 무관하다(런타임에 JS가 fetch). 그래서
+# build.py 재실행도, 페이지 재생성도 필요 없다 — 커밋만 하면 된다.
+name: Sync app metrics
+
+on:
+  schedule:
+    - cron: "30 0 * * *"   # daily 09:30 KST (sync-apps 뒤로 비켜둠)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-metrics
+  cancel-in-progress: false
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - run: npm install --no-audit --no-fund
+
+      - name: Snapshot metrics
+        run: npm run metrics
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/metrics.json
+          git diff --cached --quiet && { echo "변화 없음"; exit 0; }
+          git commit -m "Snapshot app metrics $(date -u +%Y-%m-%d)"
+          git push
