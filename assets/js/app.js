@@ -24,18 +24,10 @@
   function closeMenu() { menu.hidden = true; langBtn.setAttribute("aria-expanded", "false"); }
 
 
-  /* ---- 앱 지표 패널 (개인용) ----
-     공개 마케팅 사이트라 설치 수를 그대로 노출하면 역효과다. 기본은 숨김.
-     ?stats=1 로 켜서 localStorage에 기억시키고, ?stats=0 으로 끈다.
+  /* ---- 앱 지표 패널 ----
+     형 요청(2026-10-10): "나만 보는 사이트니 미관보단 편의성" → 게이트·버튼 없이
+     항상 펼쳐서 보여준다. 공개 주소이므로 방문자에게도 보인다는 점은 알고 채택한 것.
      데이터는 data/metrics.json (tools/sync_metrics.mjs가 매일 갱신). */
-  function statsEnabled() {
-    const q = new URLSearchParams(location.search).get("stats");
-    try {
-      if (q === "1") { localStorage.setItem("pn_stats", "1"); return true; }
-      if (q === "0") { localStorage.removeItem("pn_stats"); return false; }
-      return localStorage.getItem("pn_stats") === "1";
-    } catch (e) { return q === "1"; }
-  }
 
   const esc = v => String(v).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
@@ -68,6 +60,22 @@
          + `<span class="stat-v">${esc(cur)}${b}</span></div>`;
   }
 
+  /* 차트 진입. null = 아직 스캔 안 됨(표시 안 함), [] = 완주했고 진입 없음.
+     순위는 "위"처럼 언어별 서수를 만들지 않도록 `#12` 로 쓴다. */
+  function chartRow(list, t) {
+    if (!list) return "";
+    if (!list.length) {
+      return `<div class="stat-row"><span class="stat-k">${esc(t.stats_chart)}</span>`
+           + `<span class="stat-v stat-dim">${esc(t.stats_chart_none)}</span></div>`;
+    }
+    const label = { TOP_FREE: t.stats_free, GROSSING: t.stats_grossing };
+    const items = list.slice(0, 8).map(h =>
+      `<li>${esc(h.c.toUpperCase())} · ${esc(label[h.coll] || h.coll)} #${esc(nfmt(h.rank))}</li>`).join("");
+    return `<div class="stat-row"><span class="stat-k">${esc(t.stats_chart)}</span>`
+         + `<span class="stat-v">${esc(nfmt(list.length))}</span></div>`
+         + `<ul class="stat-chart">${items}</ul>`;
+  }
+
   function renderStats(data, id, t) {
     const e = data && data.apps && data.apps[id];
     const last = e && e.history && e.history[e.history.length - 1];
@@ -77,6 +85,7 @@
     h += row(t.stats_installs, nfmt(last.i), best.i ? nfmt(best.i) : null, t.stats_best);
     if (last.s) h += row(t.stats_rating, last.s.toFixed(2), best.s ? best.s.toFixed(2) : null, t.stats_best);
     if (last.r) h += row(t.stats_ratings, nfmt(last.r), best.r ? nfmt(best.r) : null, t.stats_best);
+    h += chartRow(e.chart, t);
     h += sparkline(e.history);
 
     const rv = e.rival;
@@ -85,6 +94,7 @@
       h += `<div class="stat-head stat-rival">${esc(t.stats_rival || "")} · ${esc(rv.label)}</div>`;
       h += row(t.stats_installs, nfmt(rlast.i), null, t.stats_best);
       if (rlast.s) h += row(t.stats_rating, rlast.s.toFixed(2), null, t.stats_best);
+      h += chartRow(rv.chart, t);
     }
     const since = (t.stats_since || "{d}").replace("{d}", data.since || "");
     h += `<div class="stat-since">${esc(since)}</div>`;
@@ -92,9 +102,8 @@
   }
 
   async function wireStats() {
-    if (!statsEnabled()) return;
-    const buttons = document.querySelectorAll(".btn-stats");
-    if (!buttons.length) return;
+    const panels = document.querySelectorAll(".card-statspanel");
+    if (!panels.length) return;
 
     let t = {};
     const blob = $("#statsI18n");
@@ -105,21 +114,11 @@
       const res = await fetch("/data/metrics.json", { cache: "no-cache" });
       if (res.ok) data = await res.json();
     } catch (e) {}
+    if (!data) return;                 // 못 받으면 빈 상자를 띄우지 않고 그대로 숨겨 둔다
 
-    buttons.forEach(btn => {
-      btn.hidden = false;
-      btn.addEventListener("click", () => {
-        const id = btn.dataset.app;
-        const panel = document.querySelector(`.card-statspanel[data-app="${id}"]`);
-        if (!panel) return;
-        const opening = panel.hidden;
-        if (opening && !panel.dataset.filled) {
-          panel.innerHTML = renderStats(data, id, t);
-          panel.dataset.filled = "1";
-        }
-        panel.hidden = !opening;
-        btn.setAttribute("aria-expanded", String(opening));
-      });
+    panels.forEach(panel => {
+      panel.innerHTML = renderStats(data, panel.dataset.app, t);
+      panel.hidden = false;
     });
   }
 

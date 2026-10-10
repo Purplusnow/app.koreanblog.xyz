@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T01:24:55.474Z",
+ "updated": "2026-10-10T01:58:58.837Z",
  "since": "2026-10-10",
  "apps": {
   "pocketarcade": {
@@ -17,7 +17,8 @@
     "s": null,
     "r": 0
    },
-   "rival": null
+   "rival": null,
+   "chart": []
   },
   "facelapse": {
    "history": [
@@ -34,7 +35,8 @@
     "s": null,
     "r": 0
    },
-   "rival": null
+   "rival": null,
+   "chart": []
   },
   "privatecamera": {
    "history": [
@@ -51,7 +53,8 @@
     "s": null,
     "r": 0
    },
-   "rival": null
+   "rival": null,
+   "chart": []
   },
   "btcreport": {
    "history": [
@@ -68,7 +71,8 @@
     "s": null,
     "r": 0
    },
-   "rival": null
+   "rival": null,
+   "chart": []
   },
   "fxcalc": {
    "history": [
@@ -85,7 +89,8 @@
     "s": null,
     "r": 0
    },
-   "rival": null
+   "rival": null,
+   "chart": []
   },
   "adrevenue": {
    "history": [
@@ -102,7 +107,8 @@
     "s": null,
     "r": 0
    },
-   "rival": null
+   "rival": null,
+   "chart": []
   },
   "secondact": {
    "history": [
@@ -119,7 +125,8 @@
     "s": 3.63,
     "r": 65
    },
-   "rival": null
+   "rival": null,
+   "chart": []
   },
   "plopcat": {
    "history": [
@@ -147,8 +154,15 @@
       "r": 345,
       "v": 10
      }
-    ]
-   }
+    ],
+    "chart": []
+   },
+   "chart": []
   }
+ },
+ "chart": {
+  "scannedAt": "2026-10-10",
+  "countries": 51,
+  "coverage": 1
  }
 }

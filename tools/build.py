@@ -72,7 +72,8 @@ def shots_html(app):
 
 
 STATS_KEYS = ("stats_title", "stats_installs", "stats_rating", "stats_ratings",
-               "stats_best", "stats_since", "stats_rival", "stats_none")
+               "stats_best", "stats_since", "stats_rival", "stats_none",
+               "stats_chart", "stats_chart_none", "stats_free", "stats_grossing")
 
 
 def stats_i18n(loc):
@@ -114,7 +115,6 @@ def card_html(app, loc, code):
         {desc_block}{shots_html(app)}
         <div class="card-foot">
           <a class="btn btn-play" href="{esc(app["playUrl"])}" target="_blank" rel="noopener">{PLAY_SVG}<span>{esc(cta)}</span></a>
-          <button class="btn btn-stats" type="button" hidden aria-expanded="false" data-app="{esc(app["id"])}">{esc(loc["stats_btn"])}</button>
         </div>
         <div class="card-statspanel" hidden data-app="{esc(app["id"])}"></div>
       </article>'''

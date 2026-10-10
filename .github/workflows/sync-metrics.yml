@@ -23,7 +23,7 @@ concurrency:
 jobs:
   metrics:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20   # 차트 감시(1,020 차트)가 러너에서 3~5분
     steps:
       - uses: actions/checkout@v7
 
