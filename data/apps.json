@@ -744,7 +744,7 @@
     }
    },
    "installs": 0,
-   "downloads": 500
+   "downloads": 1000
   },
   {
    "id": "crowncoin",
@@ -837,7 +837,7 @@
     }
    },
    "installs": 0,
-   "downloads": 100
+   "downloads": 500
   }
  ]
 }
