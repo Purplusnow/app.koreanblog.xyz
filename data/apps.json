@@ -931,6 +931,99 @@
    },
    "installs": 0,
    "downloads": 0
+  },
+  {
+   "id": "hanbutgil",
+   "package": "com.purplusnow.hanbutgil",
+   "status": "live",
+   "category": "puzzle",
+   "accent": "#E74446",
+   "icon": "assets/img/apps/hanbutgil.png",
+   "playUrl": "https://play.google.com/store/apps/details?id=com.purplusnow.hanbutgil",
+   "i18n": {
+    "en": {
+     "name": "OneLine Path: One Line Puzzle",
+     "tagline": "One stroke. Every square.",
+     "desc": "One stroke. Every square.\n\nStart at the dot and draw a single line that passes through every square exactly once. Simple to learn, and every board is a small 'aha!' waiting to happen.\n\n◆ FEATURES\n• Easy to learn, satisfying to master\n• Boards grow bigger and trickier as you go\n• Stuck? A hint shows the next few squares\n• A fresh color palette as you progress\n• No timers, no lives – play at your own pace\n• Play offline, anytime\n• Cloud save – link your Google account to keep your progress\n\n◆ HOW TO PLAY\n• Drag from the dot to a neighboring square\n• Pass through every square without crossing your line\n• Went the wrong way? Drag back to undo\n• Fill every square to solve the level\n\nRelax, think, and draw your way through."
+    },
+    "ko": {
+     "name": "한붓길 - 한붓그리기 퍼즐",
+     "tagline": "한 번에, 모든 칸을.",
+     "desc": "한 번에, 모든 칸을.\n\n점에서 시작해 모든 칸을 딱 한 번씩 지나는 선 하나를 그려 보세요. 규칙은 쉽지만, 판마다 '아하!' 하는 순간이 기다립니다.\n\n◆ 특징\n• 배우기 쉽고 풀수록 시원한 퍼즐\n• 갈수록 커지고 까다로워지는 판\n• 막히면 힌트가 다음 몇 칸을 보여줘요\n• 진행할수록 새로운 색\n• 시간 제한·하트 없음, 내 속도대로\n• 오프라인으로 언제든 플레이\n• 클라우드 저장 – Google 계정을 연결하면 진행이 안전하게 보관돼요\n\n◆ 플레이 방법\n• 점에서 옆 칸으로 드래그하세요\n• 선이 겹치지 않게 모든 칸을 지나가세요\n• 길을 잘못 들었다면 뒤로 드래그해 되돌리세요\n• 모든 칸을 채우면 클리어!\n\n차분하게 생각하고, 한 줄로 그려 보세요.\n----\n개발자 연락처 :\n조경빈 반포동 서초중앙로29길 28\n미도1차아파트, 306동 1102호\n서초구, 서울특별시 06592\nSouth Korea 1 1 1"
+    },
+    "ja": {
+     "name": "OneLine Path: 一筆書きパズル",
+     "tagline": "一本の線で、すべてのマスを。",
+     "desc": "一本の線で、すべてのマスを。\n\n点からスタートして、すべてのマスを一度ずつ通る線を一本描きましょう。ルールはかんたん、でも盤面ごとに「ひらめき」が待っています。\n\n◆ 特徴\n• 覚えやすく、解けると気持ちいい\n• 進むほど盤面が大きく、手ごわく\n• 詰まったらヒントが次の数マスを表示\n• 進むほど新しい色に\n• 時間制限もライフもなし、自分のペースで\n• オフラインでいつでも遊べる\n• クラウドセーブ – Googleアカウントを連携して進行を保存\n\n◆ 遊び方\n• 点から隣のマスへドラッグ\n• 線が交差しないよう、すべてのマスを通る\n• 間違えたら逆にドラッグして戻す\n• すべてのマスを埋めたらクリア！\n\nゆっくり考えて、一本の線で描こう。"
+    },
+    "zh": {
+     "name": "OneLine Path：一筆畫解謎",
+     "tagline": "一筆，走遍每一格。",
+     "desc": "一筆，走遍每一格。\n\n從圓點出發，畫一條線經過每一格且只經過一次。規則簡單，每一關都藏著「原來如此！」的瞬間。\n\n◆ 遊戲特色\n• 上手簡單，越解越過癮\n• 棋盤越來越大、越來越刁鑽\n• 卡關時提示會顯示接下來幾格\n• 隨著進度變換配色\n• 不限時、無體力，照自己的步調\n• 隨時離線暢玩\n• 雲端存檔 – 連結 Google 帳號即可保存進度\n\n◆ 玩法\n• 從圓點拖到相鄰的格子\n• 線不能交叉，要經過每一格\n• 走錯了？往回拖即可復原\n• 填滿所有格子即可過關\n\n靜下心來，一筆畫到底。"
+    },
+    "es": {
+     "name": "OneLine Path: Puzle de trazo",
+     "tagline": "Un trazo. Todas las casillas.",
+     "desc": "Un trazo. Todas las casillas.\n\nEmpieza en el punto y dibuja una sola línea que pase por cada casilla exactamente una vez. Fácil de aprender, y cada tablero esconde un pequeño momento «¡ajá!».\n\n◆ CARACTERÍSTICAS\n• Fácil de aprender, muy satisfactorio de dominar\n• Tableros cada vez más grandes y difíciles\n• ¿Atascado? Una pista muestra las siguientes casillas\n• Nuevos colores a medida que avanzas\n• Sin cronómetro ni vidas: juega a tu ritmo\n• Juega sin conexión cuando quieras\n• Guardado en la nube: vincula tu cuenta de Google para conservar tu progreso\n\n◆ CÓMO JUGAR\n• Arrastra desde el punto a una casilla vecina\n• Pasa por todas las casillas sin cruzar tu línea\n• ¿Te equivocaste? Arrastra hacia atrás para deshacer\n• Llena todas las casillas para superar el nivel\n\nRelájate, piensa y traza tu camino."
+    },
+    "pt": {
+     "name": "OneLine Path: Puzzle de Traço",
+     "tagline": "Um traço. Todas as casas.",
+     "desc": "Um traço. Todas as casas.\n\nComece no ponto e desenhe uma única linha que passe por todas as casas exatamente uma vez. Fácil de aprender, e cada tabuleiro guarda um pequeno momento de \"aha!\".\n\n◆ RECURSOS\n• Fácil de aprender, gostoso de dominar\n• Tabuleiros cada vez maiores e mais difíceis\n• Travou? Uma dica mostra as próximas casas\n• Novas cores conforme você avança\n• Sem cronômetro, sem vidas: jogue no seu ritmo\n• Jogue offline quando quiser\n• Salvamento na nuvem: vincule sua conta Google para guardar seu progresso\n\n◆ COMO JOGAR\n• Arraste do ponto para uma casa vizinha\n• Passe por todas as casas sem cruzar sua linha\n• Errou o caminho? Arraste de volta para desfazer\n• Preencha todas as casas para passar de nível\n\nRelaxe, pense e trace seu caminho."
+    },
+    "fr": {
+     "name": "OneLine Path : Puzzle de ligne",
+     "tagline": "Un seul trait. Toutes les cases.",
+     "desc": "Un seul trait. Toutes les cases.\n\nPars du point et trace une seule ligne qui passe une fois par chaque case. Facile à apprendre, et chaque plateau cache un petit moment « eurêka ! ».\n\n◆ CARACTÉRISTIQUES\n• Facile à apprendre, satisfaisant à maîtriser\n• Des plateaux de plus en plus grands et rusés\n• Bloqué ? Un indice montre les prochaines cases\n• De nouvelles couleurs au fil du jeu\n• Ni chrono ni vies : joue à ton rythme\n• Jouable hors ligne, à tout moment\n• Sauvegarde dans le cloud : associe ton compte Google pour garder ta progression\n\n◆ COMMENT JOUER\n• Glisse depuis le point vers une case voisine\n• Passe par toutes les cases sans croiser ta ligne\n• Mauvais chemin ? Reviens en arrière pour annuler\n• Remplis toutes les cases pour réussir le niveau\n\nDétends-toi, réfléchis et trace ton chemin."
+    },
+    "de": {
+     "name": "OneLine Path: Linienrätsel",
+     "tagline": "Ein Strich. Jedes Feld.",
+     "desc": "Ein Strich. Jedes Feld.\n\nStarte am Punkt und ziehe eine einzige Linie, die jedes Feld genau einmal besucht. Leicht zu lernen – und jedes Brett wartet auf deinen kleinen Aha-Moment.\n\n◆ FEATURES\n• Leicht zu lernen, befriedigend zu meistern\n• Bretter werden größer und kniffliger\n• Festgefahren? Ein Tipp zeigt die nächsten Felder\n• Neue Farben, je weiter du kommst\n• Kein Zeitlimit, keine Leben – spiel in deinem Tempo\n• Jederzeit offline spielbar\n• Cloud-Speicher – verknüpfe dein Google-Konto, um deinen Fortschritt zu sichern\n\n◆ SO WIRD GESPIELT\n• Zieh vom Punkt auf ein benachbartes Feld\n• Besuche jedes Feld, ohne deine Linie zu kreuzen\n• Falsch abgebogen? Zieh zurück, um rückgängig zu machen\n• Fülle alle Felder, um das Level zu lösen\n\nEntspann dich, denk nach und zieh deine Linie."
+    },
+    "it": {
+     "name": "OneLine Path: Un Solo Tratto",
+     "tagline": "Un tratto. Ogni casella.",
+     "desc": "Un tratto. Ogni casella.\n\nParti dal punto e traccia un'unica linea che passi da ogni casella esattamente una volta. Facile da imparare, e ogni tavola nasconde un piccolo momento \"eureka!\".\n\n◆ CARATTERISTICHE\n• Facile da imparare, appagante da padroneggiare\n• Tavole sempre più grandi e insidiose\n• Bloccato? Un suggerimento mostra le prossime caselle\n• Nuovi colori man mano che avanzi\n• Niente timer, niente vite: gioca al tuo ritmo\n• Gioca offline quando vuoi\n• Salvataggio nel cloud: collega il tuo account Google per conservare i progressi\n\n◆ COME SI GIOCA\n• Trascina dal punto a una casella vicina\n• Passa da tutte le caselle senza incrociare la linea\n• Strada sbagliata? Trascina indietro per annullare\n• Riempi tutte le caselle per superare il livello\n\nRilassati, pensa e traccia il tuo percorso."
+    },
+    "ru": {
+     "name": "OneLine Path: Одна линия",
+     "tagline": "Одна линия. Все клетки.",
+     "desc": "Одна линия. Все клетки.\n\nНачни с точки и проведи одну линию через каждую клетку ровно один раз. Правила простые, а на каждом поле тебя ждёт маленькое «ага!».\n\n◆ ОСОБЕННОСТИ\n• Легко научиться, приятно освоить\n• Поля становятся больше и хитрее\n• Застрял? Подсказка покажет следующие клетки\n• Новые цвета по мере игры\n• Без таймера и жизней – играй в своём темпе\n• Играй офлайн когда угодно\n• Облачное сохранение – привяжи аккаунт Google, чтобы сохранить прогресс\n\n◆ КАК ИГРАТЬ\n• Тяни от точки в соседнюю клетку\n• Пройди все клетки, не пересекая линию\n• Ошибся? Потяни назад, чтобы отменить\n• Заполни все клетки, чтобы пройти уровень\n\nРасслабься, подумай и проведи свою линию."
+    },
+    "id": {
+     "name": "OneLine Path: Teka-teki Garis",
+     "tagline": "Satu garis. Semua kotak.",
+     "desc": "Satu garis. Semua kotak.\n\nMulai dari titik dan gambar satu garis yang melewati setiap kotak tepat sekali. Mudah dipelajari, dan setiap papan menyimpan momen \"aha!\" kecil.\n\n◆ FITUR\n• Mudah dipelajari, memuaskan untuk dikuasai\n• Papan makin besar dan menantang\n• Buntu? Petunjuk menampilkan kotak berikutnya\n• Warna baru seiring kemajuanmu\n• Tanpa waktu, tanpa nyawa – main sesuai tempomu\n• Main offline kapan saja\n• Simpan di cloud – tautkan akun Google untuk menyimpan progres\n\n◆ CARA BERMAIN\n• Tarik dari titik ke kotak di sebelahnya\n• Lewati semua kotak tanpa memotong garismu\n• Salah jalan? Tarik balik untuk membatalkan\n• Isi semua kotak untuk menyelesaikan level\n\nSantai, berpikir, dan gambar jalanmu."
+    },
+    "vi": {
+     "name": "OneLine Path: Đố Một Nét",
+     "tagline": "Một nét. Mọi ô.",
+     "desc": "Một nét. Mọi ô.\n\nBắt đầu từ dấu chấm và vẽ một đường duy nhất đi qua mỗi ô đúng một lần. Luật chơi đơn giản, nhưng mỗi bàn đều có khoảnh khắc \"à há!\" chờ bạn.\n\n◆ TÍNH NĂNG\n• Dễ học, càng chơi càng đã\n• Bàn ngày càng lớn và khó hơn\n• Bí à? Gợi ý sẽ hiện vài ô tiếp theo\n• Màu mới khi bạn tiến xa\n• Không giới hạn giờ, không mạng – chơi theo nhịp của bạn\n• Chơi ngoại tuyến mọi lúc\n• Lưu trên đám mây – liên kết tài khoản Google để giữ tiến trình\n\n◆ CÁCH CHƠI\n• Kéo từ dấu chấm sang ô bên cạnh\n• Đi qua mọi ô mà không cắt đường của mình\n• Đi nhầm? Kéo ngược lại để hoàn tác\n• Lấp đầy mọi ô để qua màn\n\nThư giãn, suy nghĩ và vẽ con đường của bạn."
+    },
+    "th": {
+     "name": "OneLine Path: ลากเส้นเดียว",
+     "tagline": "เส้นเดียว ผ่านทุกช่อง",
+     "desc": "เส้นเดียว ผ่านทุกช่อง\n\nเริ่มจากจุดแล้วลากเส้นเดียวให้ผ่านทุกช่องเพียงครั้งเดียว กติกาง่าย แต่ทุกกระดานมีช่วงเวลา \"อ๋อ!\" รออยู่\n\n◆ จุดเด่น\n• เรียนรู้ง่าย ยิ่งเล่นยิ่งฟิน\n• กระดานใหญ่และท้าทายขึ้นเรื่อยๆ\n• ติดอยู่? คำใบ้จะแสดงช่องถัดไป\n• สีใหม่ตามความคืบหน้า\n• ไม่จับเวลา ไม่มีพลังชีวิต เล่นตามจังหวะของคุณ\n• เล่นออฟไลน์ได้ทุกเวลา\n• บันทึกบนคลาวด์ – เชื่อมบัญชี Google เพื่อเก็บความคืบหน้า\n\n◆ วิธีเล่น\n• ลากจากจุดไปยังช่องที่อยู่ติดกัน\n• ผ่านทุกช่องโดยไม่ให้เส้นตัดกัน\n• ไปผิดทาง? ลากย้อนกลับเพื่อแก้\n• เติมครบทุกช่องเพื่อผ่านด่าน\n\nผ่อนคลาย คิด แล้วลากเส้นของคุณ"
+    },
+    "hi": {
+     "name": "OneLine Path: One Line Puzzle",
+     "tagline": "एक ही स्ट्रोक में। हर वर्ग।",
+     "desc": "एक ही स्ट्रोक में। हर वर्ग।\n\nबिंदु से शुरू करें और एक ऐसी रेखा खींचें जो हर वर्ग से ठीक एक बार गुज़रे। सीखना आसान है, और हर बोर्ड एक छोटे से 'वाह!' पल का इंतज़ार कर रहा है।\n\n◆ विशेषताएं\n• सीखने में आसान, महारत हासिल करने पर संतुष्टि\n• जैसे-जैसे आप आगे बढ़ते हैं, बोर्ड बड़े और अधिक जटिल होते जाते हैं\n• अटक गए? एक संकेत अगले कुछ वर्गों को दिखाता है\n• प्रगति के साथ नए रंग\n• कोई टाइमर नहीं, कोई लाइफ नहीं - अपनी गति से खेलें\n• ऑफ़लाइन, कभी भी खेलें\n• क्लाउड सेव - अपनी प्रगति को सुरक्षित रखने के लिए अपना Google खाता लिंक करें\n\n◆ कैसे खेलें\n• बिंदु से पड़ोसी वर्ग तक खींचें\n• अपनी रेखा को पार किए बिना हर वर्ग से गुजरें\n• गलत दिशा में चले गए? पूर्ववत करने के लिए वापस खींचें\n• स्तर को हल करने के लिए हर वर्ग को भरें\n\nआराम करें, सोचें और अपनी रेखा खींचते हुए आगे बढ़ें।"
+    },
+    "ar": {
+     "name": "OneLine Path: One Line Puzzle",
+     "tagline": "بضربة واحدة. كل مربع.",
+     "desc": "بضربة واحدة. كل مربع.\n\nابدأ من النقطة وارسم خطًا واحدًا يمر بكل مربع مرة واحدة فقط. سهل التعلم، وكل لوحة هي بمثابة مفاجأة صغيرة تنتظرك.\n\n◆ المميزات\n• سهل التعلم، وممتع عند إتقانه\n• تزداد اللوحات حجمًا وتحديًا مع تقدمك\n\n• عالق؟ ستظهر لك تلميحات للمربعات القليلة التالية\n\n• لوحة ألوان جديدة مع تقدمك\n\n• لا يوجد مؤقت، ولا محاولات إضافية - العب بالسرعة التي تناسبك\n\n• العب دون اتصال بالإنترنت، في أي وقت\n\n• حفظ سحابي - اربط حسابك على جوجل للاحتفاظ بتقدمك\n\n◆ طريقة اللعب\n• اسحب من النقطة إلى مربع مجاور\n\n• مر بكل مربع دون تجاوز خطك\n\n• سلكت الطريق الخطأ؟ اسحب للخلف للتراجع\n\n• املأ كل مربع لحل المستوى\n\nاسترخِ، فكّر، وارسم طريقك نحو النجاح."
+    },
+    "tr": {
+     "name": "OneLine Path: Tek Çizgi",
+     "tagline": "Tek çizgi. Her kare.",
+     "desc": "Tek çizgi. Her kare.\n\nNoktadan başla ve her kareden tam bir kez geçen tek bir çizgi çiz. Öğrenmesi kolay, ve her tahtada küçük bir \"buldum!\" anı seni bekliyor.\n\n◆ ÖZELLİKLER\n• Öğrenmesi kolay, ustalaşması keyifli\n• Tahtalar giderek büyür ve zorlaşır\n• Takıldın mı? İpucu sonraki kareleri gösterir\n• İlerledikçe yeni renkler\n• Süre yok, can yok – kendi hızında oyna\n• İstediğin zaman çevrimdışı oyna\n• Bulut kaydı – ilerlemeni korumak için Google hesabını bağla\n\n◆ NASIL OYNANIR\n• Noktadan komşu kareye sürükle\n• Çizgini kesmeden her kareden geç\n• Yanlış yola mı girdin? Geri sürükleyerek geri al\n• Seviyeyi geçmek için tüm kareleri doldur\n\nRahatla, düşün ve yolunu çiz."
+    }
+   },
+   "installs": 0,
+   "downloads": 0
   }
  ]
 }
