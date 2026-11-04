@@ -5,11 +5,16 @@
   icon, screenshots, category (from Play genre) and an accent color picked
   from the icon.
 - Existing apps get their public download bucket and live/soon status
-  refreshed. Hand-edited copy (names, taglines) is never overwritten.
+  refreshed.
 
 Prints "CHANGED" when data/ was modified (the caller then runs build.py).
 
-Usage:  python3 tools/sync_apps.py [--dry-run]
+--refresh (on in the daily job since 2026-11-05) also re-pulls every
+existing app's 16-locale copy from Play, and its icon/screenshots/accent
+when the icon changed. Play is the source of truth: hand edits to copy in
+data/apps.json get overwritten -- change the store listing instead.
+
+Usage:  python3 tools/sync_apps.py [--dry-run] [--refresh]
 """
 import colorsys, html, io, json, os, re, sys, urllib.request
 
@@ -25,6 +30,7 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 EXCLUDE = {
     "com.purplusnow.candymatch3", "com.purplusnow.candymatch3premium",
     "com.purplusnow.flyingbird",
+    "com.koreanblog.btcreport", "com.koreanblog.fxwebview",  # gone from Play (404) 2026-11
 }
 
 # site locale -> (play hl, gl)
@@ -108,6 +114,72 @@ def slug(pkg):
     return re.sub(r"[^a-z0-9]", "", pkg.rsplit(".", 1)[-1].lower())
 
 
+def play_icon(en_page):
+    m = re.search(r'<meta property="og:image" content="(https://play-lh\.googleusercontent\.com/[^"=]+)', en_page)
+    return Image.open(io.BytesIO(get(m.group(1) + "=s256", binary=True)))
+
+
+def save_images(app_id, en_page, icon=None):
+    """Write icon + up to SHOTS screenshots; stale extra shots are removed."""
+    icon = icon or play_icon(en_page)
+    icon.save(os.path.join(IMG, f"{app_id}.png"), optimize=True)
+    shot_dir = os.path.join(IMG, app_id)
+    os.makedirs(shot_dir, exist_ok=True)
+    shot_ids = list(dict.fromkeys(re.findall(
+        r"play-lh\.googleusercontent\.com/([A-Za-z0-9_-]+)=w526-h296", en_page)))[:SHOTS]
+    for n, sid in enumerate(shot_ids, 1):
+        im = Image.open(io.BytesIO(get(f"https://play-lh.googleusercontent.com/{sid}=h400", binary=True)))
+        im.convert("RGB").quantize(256, method=Image.Quantize.MEDIANCUT).save(
+            os.path.join(shot_dir, f"shot{n}.png"), optimize=True)
+    for n in range(len(shot_ids) + 1, SHOTS + 1):
+        stale = os.path.join(shot_dir, f"shot{n}.png")
+        if os.path.exists(stale):
+            os.remove(stale)
+    return icon
+
+
+def fetch_i18n(pkg, en_page):
+    i18n = {"en": parse_copy(en_page)}
+    for code, (hl, gl) in LOCALES.items():
+        if code != "en":
+            i18n[code] = parse_copy(details(pkg, hl, gl))
+    return i18n
+
+
+def icon_changed(a, icon):
+    """Mean per-channel difference at 64px; > 8 means a redesigned icon, not re-encoding."""
+    from PIL import ImageChops, ImageStat
+    path = os.path.join(ROOT, a["icon"])
+    if not os.path.exists(path):
+        return True
+    old = Image.open(path).convert("RGB").resize((64, 64))
+    new = icon.convert("RGB").resize((64, 64))
+    return sum(ImageStat.Stat(ImageChops.difference(old, new)).mean) / 3 > 8
+
+
+def refresh_app(a, en_page, dry):
+    """Re-pull copy (and images if the icon changed). Returns True if anything changed."""
+    changed = False
+    new = fetch_i18n(a["package"], en_page)
+    for code, copy in new.items():
+        if not copy["desc"]:  # unparsable page: keep what we have
+            continue
+        if a["i18n"].get(code) != copy:
+            print(f"{a['id']}: {code} copy refreshed"
+                  + (f" (name -> {copy['name']})" if a["i18n"].get(code, {}).get("name") != copy["name"] else ""))
+            if not dry:
+                a["i18n"][code] = copy
+            changed = True
+    icon = play_icon(en_page)
+    if icon_changed(a, icon):
+        print(f"{a['id']}: icon/screenshots refreshed")
+        if not dry:
+            save_images(a["id"], en_page, icon)
+            a["accent"] = accent_from(icon)
+        changed = True
+    return changed
+
+
 def add_app(pkg, en_page, ids):
     app_id = slug(pkg)
     while app_id in ids:
@@ -117,23 +189,8 @@ def add_app(pkg, en_page, ids):
     if not category:
         category = "arcade" if any(c.startswith("GAME") for c in cat_ids) else "tools"
 
-    m = re.search(r'<meta property="og:image" content="(https://play-lh\.googleusercontent\.com/[^"=]+)', en_page)
-    icon = Image.open(io.BytesIO(get(m.group(1) + "=s256", binary=True)))
-    icon.save(os.path.join(IMG, f"{app_id}.png"), optimize=True)
-
-    shot_dir = os.path.join(IMG, app_id)
-    os.makedirs(shot_dir, exist_ok=True)
-    shot_ids = list(dict.fromkeys(re.findall(
-        r"play-lh\.googleusercontent\.com/([A-Za-z0-9_-]+)=w526-h296", en_page)))[:SHOTS]
-    for n, sid in enumerate(shot_ids, 1):
-        im = Image.open(io.BytesIO(get(f"https://play-lh.googleusercontent.com/{sid}=h400", binary=True)))
-        im.convert("RGB").quantize(256, method=Image.Quantize.MEDIANCUT).save(
-            os.path.join(shot_dir, f"shot{n}.png"), optimize=True)
-
-    i18n = {"en": parse_copy(en_page)}
-    for code, (hl, gl) in LOCALES.items():
-        if code != "en":
-            i18n[code] = parse_copy(details(pkg, hl, gl))
+    icon = save_images(app_id, en_page)
+    i18n = fetch_i18n(pkg, en_page)
 
     return {
         "id": app_id, "package": pkg, "status": parse_status(en_page),
@@ -146,6 +203,7 @@ def add_app(pkg, en_page, ids):
 
 def main():
     dry = "--dry-run" in sys.argv
+    refresh = "--refresh" in sys.argv
     data = json.load(open(APPS, encoding="utf-8"))
     apps = data["apps"]
     known = {a["package"] for a in apps}
@@ -164,6 +222,8 @@ def main():
         if st != a["status"]:
             print(f"{a['id']}: status {a['status']} -> {st}")
             a["status"], changed = st, True
+        if refresh and refresh_app(a, t, dry):
+            changed = True
 
     for pkg in dev_packages(data["developerUrl"]):
         if pkg in known or pkg in EXCLUDE:

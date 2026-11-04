@@ -166,7 +166,7 @@ ROOT_REDIRECT = """<script>
 (function(){try{
  var p=location.pathname; if(p!=='/'&&p!=='/index.html')return;
  if(localStorage.getItem('pn_lang_seen'))return;
- var sup={ko:1,ja:1,zh:1,es:1,pt:1,fr:1,de:1,it:1,ru:1,id:1,vi:1,th:1,hi:1,ar:1};
+ var sup={ko:1,ja:1,zh:1,es:1,pt:1,fr:1,de:1,it:1,ru:1,id:1,vi:1,th:1,hi:1,ar:1,tr:1};
  var navs=navigator.languages||[navigator.language||''];
  for(var i=0;i<navs.length;i++){var b=(navs[i]||'').toLowerCase().split('-')[0];
    if(b==='en')return;

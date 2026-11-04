@@ -1,6 +1,6 @@
 # app.koreanblog.xyz — Purplusnow app showcase
 
-최종 업데이트: 2026-10-09
+최종 업데이트: 2026-11-05
 
 Purplusnow가 구글플레이에 출시한 앱들을 **16개 언어**로 소개하는 정적 웹사이트.
 
@@ -30,13 +30,11 @@ CNAME                   # app.koreanblog.xyz
 | Pocket Arcade | com.secondact.pocketarcade | live |
 | FaceLapse: AI Face Age | com.purplusnow.facelapse | live |
 | Private Camera | com.purplusnow.private_camera | live |
-| Bitcoin Market Report | com.koreanblog.btcreport | live |
-| Currency Converter | com.koreanblog.fxwebview | live |
 | Ad Revenue Dashboard | com.purplusnow.adrevenuecontrol | live |
 | Second Act: Property Tycoon | com.purplusnow.secondactlife | live |
 | Plop Cat: Slide & Jigsaw | com.purplusnow.plopcat | live |
 
-제외: Candy Match 3/Premium(Google 정지·삭제), Flying Bird(삭제), Candy Town 3·Space Bird 2020(미출시).
+제외: Candy Match 3/Premium(Google 정지·삭제), Flying Bird(삭제), Bitcoin Market Report·Currency Converter(Play 404, 2026-11), Candy Town 3·Space Bird 2020(미출시).
 
 ## 언어 (16)
 
@@ -66,7 +64,8 @@ Play에서 16개 로케일 카피를 다시 긁는 스크립트: `tools/fetch_lo
 
 `.github/workflows/sync-apps.yml`이 매일 09:00 KST에 `tools/sync_apps.py`를 실행한다.
 - 개발자 페이지에 새 패키지가 생기면 16개 언어 카피·아이콘·스크린샷·카테고리(Play 장르)·accent(아이콘 색)를 채워 추가.
-- 기존 앱은 공개 다운로드 구간과 live/soon 상태만 갱신 (이름·문구 수동 수정분은 건드리지 않음).
+- 기존 앱은 공개 다운로드 구간·live/soon 상태에 더해 **16개 언어 이름·문구도 Play 기준으로 갱신**(`--refresh`, 2026-11-05~), 아이콘이 바뀌면 아이콘·스크린샷·accent도 갱신.
+  → **Play가 단일 출처**: `data/apps.json` 문구를 손으로 고치면 다음 날 덮어써진다. 문구는 스토어 등록정보에서 고칠 것.
 - 변경이 있으면 `build.py` 후 main에 커밋·푸시 → Pages 자동 배포.
 - 재추가 금지 패키지는 스크립트의 `EXCLUDE`. 새 카테고리 키가 생기면 `data/ui.json`의 `cat` 라벨을 추가할 것.
 - 수동 실행: Actions 탭 → Sync apps from Google Play → Run workflow (로컬: `python3 tools/sync_apps.py --dry-run`).
