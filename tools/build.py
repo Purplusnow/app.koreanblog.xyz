@@ -304,6 +304,34 @@ def sitemap(order):
             f'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n{body}\n</urlset>\n')
 
 
+def promo_json(data, order):
+    """Slim feed for in-app cross-promo cards (data/promo.json, a few KB).
+
+    Games fetch this instead of the 300KB+ apps.json. `featured` comes from the
+    hand-edited data/promo_featured.json: one id = show only that app's card,
+    several = rotate among them, empty = rotate among all live apps. Changing it
+    takes effect on the next deploy with no game update.
+    """
+    cfg_path = os.path.join(ROOT, "data", "promo_featured.json")
+    cfg = json.load(open(cfg_path, encoding="utf-8")) if os.path.exists(cfg_path) else {}
+    apps = [a for a in data["apps"] if a.get("status") == "live"]
+    ids = {a["id"] for a in apps}
+    featured = [i for i in cfg.get("featured", []) if i in ids]
+    out = []
+    for a in apps:
+        name, tag = {}, {}
+        for code in order:
+            loc = app_localized(a, code)
+            name[code] = loc.get("name", "")
+            tag[code] = loc.get("tagline", "")
+        out.append({
+            "id": a["id"], "package": a["package"], "category": a.get("category", ""),
+            "accent": a.get("accent", ""), "downloads": a.get("downloads", 0),
+            "icon": f"{BASE}/{a['icon']}", "name": name, "tagline": tag,
+        })
+    return {"v": 1, "featured": featured, "apps": out}
+
+
 def main():
     ui = json.load(open(os.path.join(ROOT, "data", "ui.json"), encoding="utf-8"))
     data = json.load(open(os.path.join(ROOT, "data", "apps.json"), encoding="utf-8"))
@@ -315,7 +343,11 @@ def main():
             f.write(page_html(data, ui, code))
     with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write(sitemap(order))
-    print(f"Built {len(order)} pages + sitemap ({len(order)} urls).")
+    promo = promo_json(data, order)
+    with open(os.path.join(ROOT, "data", "promo.json"), "w", encoding="utf-8") as f:
+        f.write(json.dumps(promo, ensure_ascii=False, separators=(",", ":")))
+    print(f"Built {len(order)} pages + sitemap ({len(order)} urls) + promo.json "
+          f"({len(promo['apps'])} apps, featured={promo['featured'] or 'all'}).")
 
     # 산출물 자가검증: `hidden` 이 author CSS 의 display 지정에 무력화되지 않았는지.
     # 2026-10-10에 지표 버튼이 이 함정으로 전 방문자에게 노출됐다.

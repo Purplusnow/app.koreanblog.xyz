@@ -70,6 +70,16 @@ Play에서 16개 로케일 카피를 다시 긁는 스크립트: `tools/fetch_lo
 - 재추가 금지 패키지는 스크립트의 `EXCLUDE`. 새 카테고리 키가 생기면 `data/ui.json`의 `cat` 라벨을 추가할 것.
 - 수동 실행: Actions 탭 → Sync apps from Google Play → Run workflow (로컬: `python3 tools/sync_apps.py --dry-run`).
 
+## 인앱 크로스 프로모 피드 (`data/promo.json`)
+
+게임(인생 2막 등)의 종료 확인창·광고 노필 대체 카드가 받아가는 경량 피드. `build.py`가 `apps.json`에서 live 앱의
+16개 언어 이름·한 줄 소개·아이콘 URL만 뽑아 생성한다(직접 편집 금지).
+
+- **노출 앱 지정**: `data/promo_featured.json`의 `featured`(앱 id 배열)를 고친다.
+  - `["plopcat"]` → 그 앱 카드만 노출 · `["plopcat","crowncoin"]` → 둘 중 순환 · `[]` → 전체 순환
+  - 게임은 자기 자신(패키지)을 알아서 제외한다. 푸시 후 Pages 배포되면 **게임 업데이트 없이** 즉시 반영.
+- URL: `https://app.koreanblog.xyz/data/promo.json` (CORS `*`). 스키마 `{"v":1,"featured":[...],"apps":[{id,package,category,accent,downloads,icon,name{lc},tagline{lc}}]}` — 필드 추가는 OK, 기존 필드 이름 변경/삭제는 출시된 게임을 깨뜨린다.
+
 ## 배포
 
 정적 사이트. GitHub Pages 또는 Cloudflare Pages.
