@@ -53,8 +53,15 @@ def href_for(code):
     return "/" if code == "en" else f"/{code}/"
 
 
+# Same rule as sync_apps.strip_contact — defensive, so a stale apps.json never leaks the address.
+CONTACT_RE = re.compile(r"\n\s*-{3,}\s*\n\s*(개발자\s*연락처|Developer contact).*\Z", re.S | re.I)
+
+
 def app_localized(app, code):
-    return app["i18n"].get(code) or app["i18n"]["en"]
+    txt = dict(app["i18n"].get(code) or app["i18n"]["en"])
+    if txt.get("desc"):
+        txt["desc"] = CONTACT_RE.sub("", txt["desc"]).strip()
+    return txt
 
 
 def shots_html(app):

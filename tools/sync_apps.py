@@ -94,8 +94,17 @@ def parse_copy(t):
     m = re.search(r'data-g-id="description"[^>]*>(.*?)</div>', t, re.S)
     if m:
         desc = re.sub(r"<br\s*/?>", "\n", m.group(1))
-        desc = html.unescape(re.sub(r"<[^>]+>", "", desc)).strip()
+        desc = strip_contact(html.unescape(re.sub(r"<[^>]+>", "", desc)))
     return {"name": name, "tagline": desc.split("\n")[0], "desc": desc}
+
+
+# Play appends the developer's legal contact block (home address) to the KR listing:
+#   "...\n----\n개발자 연락처 :\n<name> <address>..." — never republish it on the site.
+CONTACT_RE = re.compile(r"\n\s*-{3,}\s*\n\s*(개발자\s*연락처|Developer contact).*\Z", re.S | re.I)
+
+
+def strip_contact(desc):
+    return CONTACT_RE.sub("", desc or "").strip()
 
 
 def accent_from(icon):
