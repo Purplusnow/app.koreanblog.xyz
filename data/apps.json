@@ -931,6 +931,99 @@
    },
    "installs": 0,
    "downloads": 0
+  },
+  {
+   "id": "gyrogrid",
+   "package": "com.purplusnow.gyrogrid",
+   "status": "live",
+   "category": "puzzle",
+   "accent": "#7424CB",
+   "icon": "assets/img/apps/gyrogrid.png",
+   "playUrl": "https://play.google.com/store/apps/details?id=com.purplusnow.gyrogrid",
+   "i18n": {
+    "en": {
+     "name": "GYROGRID: Spin Block Puzzle",
+     "tagline": "Every piece can spin.",
+     "desc": "Every piece can spin.\nGYROGRID is a block puzzle where rotation changes everything.\n\nDrag blocks onto the grid and clear full rows and columns. Piece doesn't fit? Tap it to SPIN it. Clear a line with a spun piece and you score a SPIN CLEAR – worth more points and the key to the biggest combos.\n\n◆ FEATURES\n• Rotate any piece: spin it to fit, spin it to clear\n• VORTEX: charge it with spin clears, aim, preview the result, then twist part of the board for huge combos\n• Adventure: levels with goals and obstacles – ice, prisms, bombs and stone\n• Classic: endless play that heats up with OVERDRIVE the longer you survive\n• Daily challenge with a different rule every day\n• Missions, GYRO PASS, achievements, skins and color palettes\n• Cloud save – link your Google account to keep your progress\n\n◆ HOW TO PLAY\n• Drag a piece onto the board\n• Tap a piece to rotate it before placing it\n• Fill a row or column to clear it\n• Chain clears for combos – the game ends when nothing fits\n\nEasy to learn, deep to master. Give it a spin!"
+    },
+    "ko": {
+     "name": "GYROGRID: 스핀 블록 퍼즐",
+     "tagline": "모든 블록이 회전합니다.",
+     "desc": "모든 블록이 회전합니다.\nGYROGRID는 회전 하나로 모든 것이 달라지는 블록 퍼즐입니다.\n\n블록을 보드에 끌어다 놓고 가로줄과 세로줄을 채워 지우세요. 자리가 맞지 않나요? 블록을 탭해서 스핀하세요. 돌린 블록으로 줄을 지우면 스핀 클리어! 점수가 더 높고, 큰 콤보의 열쇠가 됩니다.\n\n◆ 게임 특징\n• 모든 블록 회전: 돌려서 맞추고, 돌려서 지우기\n• 볼텍스: 스핀 클리어로 충전하고, 조준해서 결과를 미리 본 뒤, 보드 일부를 비틀어 대형 콤보\n• 어드벤처: 얼음, 프리즘, 폭탄, 스톤 같은 장애물과 목표가 있는 레벨\n• 클래식: 오래 버틸수록 오버드라이브로 뜨거워지는 무한 모드\n• 매일 규칙이 바뀌는 데일리 챌린지\n• 미션, 자이로 패스, 업적, 스킨과 팔레트\n• 클라우드 저장: Google 계정을 연결해 진행 상황을 지키세요\n\n◆ 플레이 방법\n• 블록을 보드에 끌어다 놓으세요\n• 놓기 전에 블록을 탭하면 회전합니다\n• 가로줄이나 세로줄을 채우면 지워집니다\n• 연속으로 지워 콤보를 만드세요. 놓을 자리가 없으면 게임이 끝납니다\n\n배우기는 쉽고, 파고들수록 깊습니다. 지금 돌려 보세요!\n----\n개발자 연락처 :\n조경빈 반포동 서초중앙로29길 28\n미도1차아파트, 306동 1102호\n서초구, 서울특별시 06592\nSouth Korea 1 1 1"
+    },
+    "ja": {
+     "name": "GYROGRID: スピン ブロック パズル",
+     "tagline": "すべてのブロックが回転する。",
+     "desc": "すべてのブロックが回転する。\nGYROGRIDは、回転ひとつですべてが変わるブロックパズルです。\n\nブロックを盤面にドラッグして、横や縦の列をそろえて消しましょう。はまらない？ ブロックをタップしてスピン！ 回したブロックでラインを消すとスピンクリア。得点が高く、大コンボのカギになります。\n\n◆ 特徴\n• どのブロックも回転：回してはめて、回して消す\n• ボルテックス：スピンクリアでチャージし、狙いを定めて結果をプレビュー、盤面の一部をひねって大コンボ\n• アドベンチャー：氷、プリズム、爆弾、ストーンなどのギミックと目標があるレベル\n• クラシック：粘るほどオーバードライブで熱くなるエンドレスモード\n• 毎日ルールが変わるデイリーチャレンジ\n• ミッション、ジャイロパス、実績、スキン、パレット\n• クラウドセーブ：Googleアカウントを連携して進行状況を守れます\n\n◆ 遊び方\n• ブロックを盤面にドラッグ\n• 置く前にタップすると回転\n• 横か縦の列をそろえると消える\n• 連続で消してコンボ。置ける場所がなくなるとゲームオーバー\n\n覚えるのはかんたん、極めるほど奥深い。さあ、回してみよう！"
+    },
+    "zh": {
+     "name": "GYROGRID：旋轉方塊消除",
+     "tagline": "每個方塊都能旋轉。",
+     "desc": "每個方塊都能旋轉。\nGYROGRID 是一款旋轉改變一切的方塊消除遊戲。\n\n把方塊拖到棋盤上，填滿整行或整列即可消除。放不下？點擊方塊就能旋轉！用旋轉過的方塊消除就是「旋轉消除」，得分更高，也是打出大連擊的關鍵。\n\n◆ 遊戲特色\n• 每塊都能旋轉：轉一轉就放下，轉一轉就消除\n• 漩渦：用旋轉消除充能，瞄準並預覽結果，扭轉棋盤的一部分打出大連擊\n• 冒險：帶有目標和障礙的關卡——冰塊、稜鏡、炸彈和石塊\n• 經典：堅持越久越火熱的無盡模式，進入超頻狀態\n• 每天規則都不同的每日挑戰\n• 任務、陀螺通行證、成就、造型和色盤\n• 雲端存檔：綁定 Google 帳號保存進度\n\n◆ 玩法\n• 把方塊拖到棋盤上\n• 放下前點擊方塊即可旋轉\n• 填滿一行或一列即可消除\n• 連續消除打出連擊，無處可放時遊戲結束\n\n上手簡單，越玩越有深度。來轉一轉吧！"
+    },
+    "es": {
+     "name": "GYROGRID: Bloques Giratorios",
+     "tagline": "Todas las piezas pueden girar.",
+     "desc": "Todas las piezas pueden girar.\nGYROGRID es un puzzle de bloques en el que girar lo cambia todo.\n\nArrastra bloques al tablero y borra filas y columnas completas. ¿La pieza no cabe? Tócala para girarla. Si borras una línea con una pieza girada, consigues un BORRADO CON GIRO: vale más puntos y es la clave de los combos más grandes.\n\n◆ CARACTERÍSTICAS\n• Gira cualquier pieza: gira para encajar, gira para borrar\n• VÓRTICE: cárgalo con borrados con giro, apunta, previsualiza el resultado y tuerce una parte del tablero para lograr combos enormes\n• Aventura: niveles con objetivos y obstáculos: hielo, prismas, bombas y piedra\n• Clásico: partidas infinitas que se calientan con OVERDRIVE cuanto más aguantas\n• Desafío diario con una regla distinta cada día\n• Misiones, GYRO PASS, logros, aspectos y paletas de colores\n• Guardado en la nube: vincula tu cuenta de Google para conservar tu progreso\n\n◆ CÓMO SE JUEGA\n• Arrastra una pieza al tablero\n• Tócala para girarla antes de colocarla\n• Completa una fila o columna para borrarla\n• Encadena borrados para hacer combos: la partida termina cuando ya no cabe nada\n\nFácil de aprender, difícil de dominar. ¡Dale un giro!"
+    },
+    "pt": {
+     "name": "GYROGRID: Blocos Giratórios",
+     "tagline": "Toda peça pode girar.",
+     "desc": "Toda peça pode girar.\nGYROGRID é um quebra-cabeça de blocos em que girar muda tudo.\n\nArraste blocos para o tabuleiro e limpe linhas e colunas completas. A peça não cabe? Toque nela para girar. Limpe uma linha com uma peça girada e faça uma LIMPEZA COM GIRO: vale mais pontos e é a chave para os maiores combos.\n\n◆ DESTAQUES\n• Gire qualquer peça: gire para encaixar, gire para limpar\n• VÓRTICE: carregue com limpezas com giro, mire, veja a prévia do resultado e torça parte do tabuleiro para combos enormes\n• Aventura: níveis com metas e obstáculos – gelo, prismas, bombas e pedra\n• Clássico: partidas sem fim que esquentam com o OVERDRIVE quanto mais você resiste\n• Desafio diário com uma regra diferente a cada dia\n• Missões, GYRO PASS, conquistas, skins e paletas de cores\n• Salvamento na nuvem: vincule sua conta Google para manter seu progresso\n\n◆ COMO JOGAR\n• Arraste uma peça para o tabuleiro\n• Toque na peça para girá-la antes de colocar\n• Complete uma linha ou coluna para limpá-la\n• Encadeie limpezas para fazer combos – o jogo acaba quando nada mais cabe\n\nFácil de aprender, profundo para dominar. Dê um giro!"
+    },
+    "fr": {
+     "name": "GYROGRID : Puzzle Blocs Spin",
+     "tagline": "Chaque pièce peut pivoter.",
+     "desc": "Chaque pièce peut pivoter.\nGYROGRID est un puzzle de blocs où la rotation change tout.\n\nGlissez les blocs sur la grille et effacez les lignes et colonnes complètes. La pièce ne rentre pas ? Touchez-la pour la faire tourner. Effacez une ligne avec une pièce tournée et c'est un SPIN CLEAR : plus de points et la clé des plus gros combos.\n\n◆ POINTS FORTS\n• Faites pivoter chaque pièce : tournez pour caser, tournez pour effacer\n• VORTEX : chargez-le avec des spin clears, visez, prévisualisez le résultat, puis tordez une partie de la grille pour d'énormes combos\n• Aventure : des niveaux avec objectifs et obstacles – glace, prismes, bombes et pierre\n• Classique : une partie sans fin qui s'embrase avec l'OVERDRIVE plus vous tenez\n• Défi quotidien avec une règle différente chaque jour\n• Missions, GYRO PASS, succès, skins et palettes de couleurs\n• Sauvegarde dans le cloud : associez votre compte Google pour garder votre progression\n\n◆ COMMENT JOUER\n• Glissez une pièce sur la grille\n• Touchez-la pour la faire pivoter avant de la poser\n• Remplissez une ligne ou une colonne pour l'effacer\n• Enchaînez les effacements pour des combos – la partie se termine quand plus rien ne rentre\n\nFacile à apprendre, profond à maîtriser. Faites tourner !"
+    },
+    "de": {
+     "name": "GYROGRID: Spin-Blockpuzzle",
+     "tagline": "Jeder Stein lässt sich drehen.",
+     "desc": "Jeder Stein lässt sich drehen.\nGYROGRID ist ein Blockpuzzle, in dem Drehen alles verändert.\n\nZieh Blöcke aufs Spielfeld und räum volle Reihen und Spalten ab. Der Stein passt nicht? Tipp ihn an, um ihn zu drehen. Räumst du eine Reihe mit einem gedrehten Stein ab, gibt es einen SPIN-CLEAR – mehr Punkte und der Schlüssel zu den größten Combos.\n\n◆ FEATURES\n• Dreh jeden Stein: drehen zum Einpassen, drehen zum Abräumen\n• VORTEX: mit Spin-Clears aufladen, zielen, Ergebnis vorab ansehen und einen Teil des Spielfelds für riesige Combos verdrehen\n• Abenteuer: Level mit Zielen und Hindernissen – Eis, Prismen, Bomben und Stein\n• Klassik: Endlosspiel, das mit OVERDRIVE immer heißer wird, je länger du durchhältst\n• Tägliche Herausforderung mit jeden Tag neuer Regel\n• Missionen, GYRO PASS, Erfolge, Skins und Farbpaletten\n• Cloud-Speicherung: Verknüpfe dein Google-Konto, um deinen Fortschritt zu sichern\n\n◆ SO WIRD GESPIELT\n• Zieh einen Stein aufs Spielfeld\n• Tipp ihn vor dem Ablegen an, um ihn zu drehen\n• Füll eine Reihe oder Spalte, um sie abzuräumen\n• Räum mehrmals hintereinander ab für Combos – das Spiel endet, wenn nichts mehr passt\n\nLeicht zu lernen, schwer zu meistern. Dreh mal!"
+    },
+    "it": {
+     "name": "GYROGRID: Blocchi Rotanti",
+     "tagline": "Ogni pezzo può ruotare.",
+     "desc": "Ogni pezzo può ruotare.\nGYROGRID è un puzzle di blocchi in cui la rotazione cambia tutto.\n\nTrascina i blocchi sul tabellone e pulisci righe e colonne complete. Il pezzo non entra? Toccalo per ruotarlo. Pulisci una linea con un pezzo ruotato ed è una PULIZIA CON GIRO: più punti e la chiave per le combo più grandi.\n\n◆ CARATTERISTICHE\n• Ruota ogni pezzo: ruota per incastrare, ruota per pulire\n• VORTICE: caricalo con le pulizie con giro, mira, guarda l'anteprima del risultato e torci una parte del tabellone per combo enormi\n• Avventura: livelli con obiettivi e ostacoli – ghiaccio, prismi, bombe e pietra\n• Classica: partite infinite che si scaldano con l'OVERDRIVE più a lungo resisti\n• Sfida giornaliera con una regola diversa ogni giorno\n• Missioni, GYRO PASS, trofei, skin e palette di colori\n• Salvataggio nel cloud: collega il tuo account Google per conservare i progressi\n\n◆ COME SI GIOCA\n• Trascina un pezzo sul tabellone\n• Toccalo per ruotarlo prima di posizionarlo\n• Riempi una riga o una colonna per pulirla\n• Concatena le pulizie per fare combo – la partita finisce quando non entra più nulla\n\nFacile da imparare, profondo da padroneggiare. Fai un giro!"
+    },
+    "ru": {
+     "name": "GYROGRID: блок-пазл со спином",
+     "tagline": "Любую фигуру можно вращать.",
+     "desc": "Любую фигуру можно вращать.\nGYROGRID — блок-пазл, в котором вращение меняет всё.\n\nПеретаскивай блоки на поле и очищай заполненные ряды и столбцы. Фигура не влезает? Коснись её, чтобы повернуть. Очисти линию повёрнутой фигурой — это СПИН-ЗАЧИСТКА: больше очков и ключ к самым большим комбо.\n\n◆ ОСОБЕННОСТИ\n• Вращай любую фигуру: поверни, чтобы вставить, поверни, чтобы очистить\n• ВИХРЬ: заряжай спин-зачистками, прицелься, посмотри результат заранее и закрути часть поля ради огромных комбо\n• Приключения: уровни с целями и препятствиями — лёд, призмы, бомбы и камень\n• Классика: бесконечная игра, которая накаляется с ФОРСАЖЕМ, чем дольше держишься\n• Игра дня с новым правилом каждый день\n• Задания, ГИРО-ПРОПУСК, награды, скины и палитры\n• Облачное сохранение: привяжи аккаунт Google, чтобы сохранить прогресс\n\n◆ КАК ИГРАТЬ\n• Перетащи фигуру на поле\n• Коснись фигуры, чтобы повернуть её перед размещением\n• Заполни ряд или столбец, чтобы очистить его\n• Очищай подряд ради комбо — игра заканчивается, когда фигуры больше не помещаются\n\nЛегко научиться, интересно осваивать. Закрути!"
+    },
+    "id": {
+     "name": "GYROGRID: Puzzle Blok Spin",
+     "tagline": "Setiap kepingan bisa diputar.",
+     "desc": "Setiap kepingan bisa diputar.\nGYROGRID adalah puzzle blok di mana memutar mengubah segalanya.\n\nSeret blok ke papan dan hapus baris serta kolom yang penuh. Kepingan tidak muat? Ketuk untuk memutarnya. Hapus baris dengan kepingan yang diputar untuk mendapatkan SPIN CLEAR – poin lebih tinggi dan kunci kombo terbesar.\n\n◆ FITUR\n• Putar kepingan apa saja: putar agar pas, putar untuk menghapus\n• VORTEX: isi dengan spin clear, bidik, lihat pratinjau hasilnya, lalu pelintir sebagian papan untuk kombo besar\n• Petualangan: level dengan target dan rintangan – es, prisma, bom, dan batu\n• Klasik: permainan tanpa akhir yang makin panas dengan OVERDRIVE semakin lama kamu bertahan\n• Tantangan harian dengan aturan berbeda setiap hari\n• Misi, GYRO PASS, prestasi, skin, dan palet warna\n• Simpan di cloud: tautkan akun Google untuk menjaga progresmu\n\n◆ CARA BERMAIN\n• Seret kepingan ke papan\n• Ketuk kepingan untuk memutarnya sebelum ditempatkan\n• Penuhi baris atau kolom untuk menghapusnya\n• Hapus berturut-turut untuk kombo – permainan berakhir saat tidak ada yang muat\n\nMudah dipelajari, seru untuk dikuasai. Ayo putar!"
+    },
+    "vi": {
+     "name": "GYROGRID: Xếp Khối Xoay",
+     "tagline": "Mọi khối đều có thể xoay.",
+     "desc": "Mọi khối đều có thể xoay.\nGYROGRID là game xếp khối mà một lần xoay thay đổi tất cả.\n\nKéo khối lên bàn chơi và phá các hàng, cột đã đầy. Khối không vừa? Chạm vào để xoay. Phá hàng bằng khối đã xoay là XOAY PHÁ: được nhiều điểm hơn và là chìa khóa cho những combo lớn nhất.\n\n◆ TÍNH NĂNG\n• Xoay mọi khối: xoay để vừa, xoay để phá\n• LỐC XOÁY: nạp bằng xoay phá, ngắm, xem trước kết quả rồi vặn một phần bàn chơi để tạo combo khủng\n• Phiêu lưu: các màn chơi có mục tiêu và chướng ngại – băng, lăng kính, bom và đá\n• Cổ điển: chơi không giới hạn, càng trụ lâu càng nóng với TĂNG TỐC\n• Thử thách hằng ngày với luật chơi mới mỗi ngày\n• Nhiệm vụ, GYRO PASS, thành tích, skin và bảng màu\n• Lưu trên đám mây: liên kết tài khoản Google để giữ tiến trình\n\n◆ CÁCH CHƠI\n• Kéo khối lên bàn chơi\n• Chạm vào khối để xoay trước khi đặt\n• Lấp đầy hàng hoặc cột để phá\n• Phá liên tiếp để tạo combo – trò chơi kết thúc khi không còn chỗ đặt\n\nDễ học, càng chơi càng sâu. Xoay thử ngay!"
+    },
+    "th": {
+     "name": "GYROGRID: สปินบล็อกพัซเซิล",
+     "tagline": "หมุนได้ทุกชิ้น",
+     "desc": "หมุนได้ทุกชิ้น\nGYROGRID คือเกมพัซเซิลบล็อกที่การหมุนเปลี่ยนทุกอย่าง\n\nลากบล็อกลงกระดาน แล้วเติมแถวแนวนอนหรือแนวตั้งให้เต็มเพื่อเคลียร์ วางไม่ลงใช่ไหม? แตะที่ชิ้นเพื่อหมุน! เคลียร์แถวด้วยชิ้นที่หมุนแล้วคือสปินเคลียร์ ได้คะแนนมากกว่าและเป็นกุญแจสู่คอมโบใหญ่\n\n◆ จุดเด่น\n• หมุนได้ทุกชิ้น: หมุนให้ลงล็อก หมุนให้เคลียร์\n• วอร์เท็กซ์: ชาร์จด้วยสปินเคลียร์ เล็ง ดูผลล่วงหน้า แล้วบิดบางส่วนของกระดานเพื่อคอมโบสุดยิ่งใหญ่\n• ผจญภัย: ด่านที่มีเป้าหมายและอุปสรรค ทั้งน้ำแข็ง ปริซึม ระเบิด และหิน\n• คลาสสิก: เล่นได้ไม่สิ้นสุด ยิ่งอยู่นานยิ่งร้อนแรงด้วยโอเวอร์ไดรฟ์\n• ภารกิจรายวันที่กติกาเปลี่ยนทุกวัน\n• มิชชัน ไจโรพาส ความสำเร็จ สกิน และพาเลตต์สี\n• เซฟบนคลาวด์: เชื่อมบัญชี Google เพื่อเก็บความคืบหน้า\n\n◆ วิธีเล่น\n• ลากชิ้นบล็อกลงกระดาน\n• แตะที่ชิ้นเพื่อหมุนก่อนวาง\n• เติมแถวหรือคอลัมน์ให้เต็มเพื่อเคลียร์\n• เคลียร์ต่อเนื่องเพื่อทำคอมโบ เกมจบเมื่อไม่มีที่ให้วาง\n\nเล่นง่าย แต่ยิ่งเล่นยิ่งลึก มาหมุนกันเลย!"
+    },
+    "hi": {
+     "name": "GYROGRID: Spin Block Puzzle",
+     "tagline": "हर ब्लॉक घूम सकता है।",
+     "desc": "हर ब्लॉक घूम सकता है।\nGYROGRID एक ब्लॉक पहेली है जिसमें घुमाने से सब कुछ बदल जाता है।\n\nब्लॉकों को ग्रिड पर खींचें और पूरी पंक्तियों और स्तंभों को साफ़ करें। कोई ब्लॉक फिट नहीं हो रहा? उसे टैप करके घुमाएँ। घुमाए हुए ब्लॉक से एक पंक्ति साफ़ करने पर आपको स्पिन क्लियर मिलता है – जिससे ज़्यादा अंक मिलते हैं और यह सबसे बड़े कॉम्बो बनाने की कुंजी है।\n\n\n◆ विशेषताएं\n• किसी भी मोहरे को घुमाएँ: उसे घुमाकर सही जगह पर रखें, घुमाकर हटाएँ\n• वोर्टेक्स: स्पिन क्लियर से इसे चार्ज करें, निशाना लगाएँ, परिणाम देखें, फिर बड़े कॉम्बो बनाने के लिए बोर्ड के किसी हिस्से को घुमाएँ\n• एडवेंचर: बर्फ, प्रिज्म, बम और पत्थर जैसे लक्ष्यों और बाधाओं वाले स्तर\n• क्लासिक: अंतहीन खेल जो जितना ज़्यादा समय तक आप टिके रहते हैं, उतना ही रोमांचक होता जाता है\n• हर दिन एक अलग नियम के साथ दैनिक चुनौती\n• मिशन, जायरो पास, उपलब्धियाँ, स्किन और रंग पैलेट\n• क्लाउड सेव - अपनी प्रगति को सुरक्षित रखने के लिए अपना Google खाता लिंक करें\n\n◆ कैसे खेलें\n• एक मोहरे को बोर्ड पर खींचें\n• रखने से पहले उसे घुमाने के लिए टैप करें\n• एक पंक्ति या स्तंभ को भरकर उसे हटाएँ\n• कॉम्बो बनाने के लिए लगातार क्लियर करें - खेल तब समाप्त होता है जब कुछ भी सही जगह पर नहीं बैठता\n\nसीखना आसान, महारत हासिल करना मुश्किल। इसे आज़माएँ!"
+    },
+    "ar": {
+     "name": "GYROGRID: Spin Block Puzzle",
+     "tagline": "كل قطعة قابلة للدوران.",
+     "desc": "كل قطعة قابلة للدوران.\n\nجيروجريد هي لعبة ألغاز مكعبات حيث يُغيّر الدوران كل شيء.\n\nاسحب المكعبات إلى الشبكة وأزل الصفوف والأعمدة بالكامل. هل القطعة لا تتناسب؟ انقر عليها لتدويرها. أزل صفًا بقطعة مُدوّرة لتحصل على \"إزالات الدوران\" - تُضيف نقاطًا أكثر وتُعدّ مفتاحًا لأكبر التوليفات.\n... ◆ المميزات\n\n• تدوير أي قطعة: قم بتدويرها لتناسب المساحة، وقم بتدويرها لإزالتها\n\n• الدوامة: اشحنها بحركات التدوير، صوب، شاهد النتيجة، ثم قم بتدوير جزء من اللوحة للحصول على مجموعات ضخمة\n\n• المغامرة: مستويات مع أهداف وعقبات - جليد، ومنشورات، وقنابل، وحجارة\n\n• الكلاسيكية: لعب لا نهائي يزداد حماسًا مع خاصية السرعة القصوى كلما طالت مدة بقائك على قيد الحياة\n\n• تحدي يومي بقاعدة مختلفة كل يوم\n\n• مهام، وبطاقة جيروسكوب، وإنجازات، وأزياء، ولوحات ألوان\n• حفظ سحابي - اربط حسابك على جوجل للاحتفاظ بتقدمك\n\n◆ طريقة اللعب\n• اسحب قطعة إلى اللوحة\n• انقر على قطعة لتدويرها قبل وضعها\n• املأ صفًا أو عمودًا لإزالته\n• قم بتسلسل عمليات الإزالة للحصول على مجموعات - تنتهي اللعبة عندما لا تتناسب أي قطعة\n\nسهلة التعلم، عميقة الإتقان. جربها!"
+    },
+    "tr": {
+     "name": "GYROGRID: Spin Blok Bulmacası",
+     "tagline": "Her parça dönebilir.",
+     "desc": "Her parça dönebilir.\nGYROGRID, döndürmenin her şeyi değiştirdiği bir blok bulmacasıdır.\n\nBlokları tahtaya sürükle, dolu satır ve sütunları temizle. Parça sığmıyor mu? Döndürmek için dokun. Döndürülmüş bir parçayla satır temizlersen SPİN TEMİZLEME yaparsın: daha çok puan ve en büyük komboların anahtarı.\n\n◆ ÖZELLİKLER\n• Her parçayı döndür: sığdırmak için döndür, temizlemek için döndür\n• GİRDAP: spin temizlemeleriyle doldur, nişan al, sonucu önceden gör ve dev kombolar için tahtanın bir kısmını bük\n• Macera: hedefleri ve engelleri olan seviyeler – buz, prizma, bomba ve taş\n• Klasik: ne kadar dayanırsan OVERDRIVE ile o kadar kızışan sonsuz oyun\n• Her gün farklı kuralla günlük meydan okuma\n• Görevler, GYRO PASS, başarılar, görünümler ve renk paletleri\n• Bulut kaydı: ilerlemeni korumak için Google hesabını bağla\n\n◆ NASIL OYNANIR\n• Bir parçayı tahtaya sürükle\n• Yerleştirmeden önce döndürmek için parçaya dokun\n• Temizlemek için bir satırı veya sütunu doldur\n• Kombo için art arda temizle – hiçbir şey sığmadığında oyun biter\n\nÖğrenmesi kolay, ustalaşması derin. Hadi döndür!"
+    }
+   },
+   "installs": 0,
+   "downloads": 0
   }
  ]
 }
