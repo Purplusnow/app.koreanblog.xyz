@@ -216,6 +216,12 @@ def page_html(data, ui, code):
     return f'''<!DOCTYPE html>
 <html lang="{lang_attr}" dir="{d}">
 <head>
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NH884G46"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
