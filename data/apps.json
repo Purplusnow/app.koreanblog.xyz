@@ -744,7 +744,7 @@
     }
    },
    "installs": 0,
-   "downloads": 10
+   "downloads": 50
   },
   {
    "id": "hanbutgil",
@@ -930,7 +930,7 @@
     }
    },
    "installs": 0,
-   "downloads": 1
+   "downloads": 5
   },
   {
    "id": "gyrogrid",
@@ -1023,7 +1023,7 @@
     }
    },
    "installs": 0,
-   "downloads": 0
+   "downloads": 1
   }
  ]
 }
