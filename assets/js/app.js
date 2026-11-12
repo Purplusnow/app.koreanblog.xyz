@@ -24,6 +24,20 @@
   function closeMenu() { menu.hidden = true; langBtn.setAttribute("aria-expanded", "false"); }
 
 
+  // Shuffle app cards on every visit (HTML stays download-sorted for crawlers/no-JS).
+  function shuffleCards() {
+    document.querySelectorAll(".app-grid").forEach(grid => {
+      const cards = Array.from(grid.children).filter(el => el.classList.contains("card"));
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+      cards.forEach(c => grid.appendChild(c));
+    });
+  }
+  // Script is loaded at the end of <body>, so the grid already exists — run now, before first paint.
+  shuffleCards();
+
   function wire() {
     const themeBtn = $("#themeToggle");
     if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
