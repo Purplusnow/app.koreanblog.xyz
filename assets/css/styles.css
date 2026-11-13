@@ -3,7 +3,7 @@
   --bg:#0b0b12; --bg-2:#12121d; --card:#15151f; --card-2:#1b1b28;
   --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14);
   --txt:#f2f2f7; --muted:#a2a2b4; --muted-2:#71718a;
-  --accent:#7c7cff; --accent-ink:#fff;
+  --accent:#7c7cff; --accent-ink:#fff; --btn-bg:#5b5bef;
   --shadow:0 12px 40px -12px rgba(0,0,0,.6);
   --radius:20px; --radius-sm:12px;
   --maxw:1120px;
@@ -105,7 +105,7 @@ a{color:inherit;text-decoration:none}
 /* Play button */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:inherit;font-weight:700;font-size:14.5px;border-radius:12px;padding:11px 16px;cursor:pointer;border:1px solid transparent;transition:transform .15s,filter .2s,background .2s,border-color .2s}
 .btn:active{transform:scale(.98)}
-.btn-play{width:100%;background:var(--accent);color:var(--accent-ink);box-shadow:0 8px 22px -10px color-mix(in srgb,var(--accent) 80%,transparent)}
+.btn-play{width:100%;background:var(--btn-bg);color:var(--accent-ink);box-shadow:0 8px 22px -10px color-mix(in srgb,var(--btn-bg) 80%,transparent)}
 .btn-play:hover{filter:brightness(1.07)}
 .btn-play svg{flex:none}
 .btn-ghost{border-color:var(--line-2);color:var(--txt);background:var(--card)}
