@@ -1,0 +1,12 @@
+{
+ "_note": "World Restaurant Tour ad settings. The game reads this at start (8 s timeout); missing, broken or out-of-range values fall back to the built-in ones. Bounds: scripts/monet.gd REMOTE_BOUNDS.",
+ "inter_first_level": 8,
+ "inter_first_play_s": 300,
+ "inter_every": 3,
+ "inter_min_gap_s": 180,
+ "inter_after_rewarded_s": 90,
+ "starter_after_level": 4,
+ "double_coins_per_day": 20,
+ "double_full": 3,
+ "double_tail": 0.5
+}

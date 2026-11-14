@@ -85,3 +85,13 @@ Play에서 16개 로케일 카피를 다시 긁는 스크립트: `tools/fetch_lo
 정적 사이트. GitHub Pages 또는 Cloudflare Pages.
 - `CNAME` = app.koreanblog.xyz, `.nojekyll` 포함.
 - DNS: `app` 서브도메인 CNAME → Pages 호스트.
+
+## 게임 원격 설정 (`data/config/<게임>.json`)
+
+게임이 시작할 때 읽는 광고 설정. 고치고 푸시하면 Pages 배포 뒤 **다음 실행부터** 반영(게임 업데이트 불필요).
+파일이 없거나 깨졌거나 값이 범위를 벗어나면 게임은 내장 기본값(또는 마지막 정상값)을 쓴다 — 범위는 각 게임 `scripts/monet.gd` `REMOTE_BOUNDS`.
+
+- `worldrestaurant.json` — 월드 레스토랑 투어 (2026-11-14~)
+  - `inter_first_level` 이 레벨까지 전면광고 없음 · `inter_first_play_s` 누적 플레이 초 · `inter_every` 판 종료 N번에 1번 · `inter_min_gap_s` 전면 간 최소 초 · `inter_after_rewarded_s` 보상형 직후 쉬는 초
+  - `double_coins_per_day` 결과화면 코인 광고 하루 최대 · `double_full` 그중 2배 횟수 · `double_tail` 이후 추가 배율(0.5 = x1.5)
+  - `starter_after_level` 스타터팩 제안 시작 레벨
