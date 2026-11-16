@@ -131,20 +131,31 @@ def play_icon(en_page):
 def save_images(app_id, en_page, icon=None):
     """Write icon + up to SHOTS screenshots; stale extra shots are removed."""
     icon = icon or play_icon(en_page)
-    icon.save(os.path.join(IMG, f"{app_id}.png"), optimize=True)
+    icon.save(os.path.join(IMG, f"{app_id}.png"), optimize=True)  # og:image / JSON-LD
+    save_card_icon(icon, os.path.join(IMG, f"{app_id}.webp"))
     shot_dir = os.path.join(IMG, app_id)
     os.makedirs(shot_dir, exist_ok=True)
     shot_ids = list(dict.fromkeys(re.findall(
         r"play-lh\.googleusercontent\.com/([A-Za-z0-9_-]+)=w526-h296", en_page)))[:SHOTS]
     for n, sid in enumerate(shot_ids, 1):
         im = Image.open(io.BytesIO(get(f"https://play-lh.googleusercontent.com/{sid}=h400", binary=True)))
-        im.convert("RGB").quantize(256, method=Image.Quantize.MEDIANCUT).save(
-            os.path.join(shot_dir, f"shot{n}.png"), optimize=True)
-    for n in range(len(shot_ids) + 1, SHOTS + 1):
-        stale = os.path.join(shot_dir, f"shot{n}.png")
-        if os.path.exists(stale):
-            os.remove(stale)
+        save_shot(im, os.path.join(shot_dir, f"shot{n}.webp"))
+    for n in range(1, SHOTS + 1):
+        for ext in ("png",) + (("webp",) if n > len(shot_ids) else ()):
+            stale = os.path.join(shot_dir, f"shot{n}.{ext}")
+            if os.path.exists(stale):
+                os.remove(stale)
     return icon
+
+
+def save_card_icon(icon, path):
+    """Card shows the icon at 64px; 128px covers 2x screens."""
+    icon.convert("RGBA").resize((128, 128), Image.LANCZOS).save(path, "WEBP", quality=85, method=6)
+
+
+def save_shot(im, path):
+    """Screenshots are photo-like: lossy WebP is ~3x smaller than a quantized PNG."""
+    im.convert("RGB").save(path, "WEBP", quality=80, method=6)
 
 
 def fetch_i18n(pkg, en_page):

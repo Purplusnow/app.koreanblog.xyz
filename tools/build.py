@@ -68,7 +68,7 @@ def shots_html(app):
     d = os.path.join(ROOT, "assets", "img", "apps", app["id"])
     if not os.path.isdir(d):
         return ""
-    files = sorted(f for f in os.listdir(d) if f.startswith("shot") and f.endswith(".png"))
+    files = sorted(f for f in os.listdir(d) if f.startswith("shot") and f.endswith(".webp"))
     if not files:
         return ""
     imgs = "".join(
@@ -101,7 +101,7 @@ def card_html(app, loc, code):
     tag_block = f'<p class="card-tagline">{esc(tagline)}</p>' if tagline else ""
     return f'''      <article class="card" style="--card-accent:{esc(app["accent"])}">
         <div class="card-head">
-          <img class="card-icon" src="/{esc(app["icon"])}" alt="{esc(name)}" width="64" height="64" loading="lazy">
+          <img class="card-icon" src="/{esc(os.path.splitext(app["icon"])[0])}.webp" alt="{esc(name)}" width="64" height="64" loading="lazy">
           <div class="card-headtext">
             <h3 class="card-name">{esc(name)}</h3>
             <div class="chip-row"><span class="chip">{esc(cat)}</span>{badge}</div>
