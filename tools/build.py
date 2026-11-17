@@ -7,9 +7,16 @@ baked into the HTML, plus hreflang, canonical, Open Graph and JSON-LD.
 
 Usage:  python3 tools/build.py
 """
-import json, os, html, re
+import hashlib, json, os, html, re
+from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def asset_url(rel):
+    """/rel?v=<content hash> so a deploy never pairs new HTML with a cached old JS/CSS."""
+    with open(os.path.join(ROOT, rel), "rb") as f:
+        return f"/{rel}?v={hashlib.sha1(f.read()).hexdigest()[:8]}"
 BASE = "https://app.koreanblog.xyz"
 
 # Google Search Console "HTML tag" verification. Paste only the content value
@@ -71,10 +78,15 @@ def shots_html(app):
     files = sorted(f for f in os.listdir(d) if f.startswith("shot") and f.endswith(".webp"))
     if not files:
         return ""
-    imgs = "".join(
-        f'<img src="/assets/img/apps/{app["id"]}/{f}" alt="" loading="lazy" decoding="async">'
-        for f in files
-    )
+    # Only the first shot gets a real src (native lazy loading); the rest carry
+    # data-src and are loaded by app.js as they near the visible part of the
+    # horizontal strip. width/height reserve space so the strip doesn't jump.
+    imgs = ""
+    for n, f in enumerate(files):
+        w, h = Image.open(os.path.join(d, f)).size
+        url = f'/assets/img/apps/{app["id"]}/{f}'
+        src = f'src="{url}" loading="lazy"' if n == 0 else f'data-src="{url}"'
+        imgs += f'<img {src} alt="" width="{w}" height="{h}" style="aspect-ratio:{w}/{h}" decoding="async">'
     return f'\n        <div class="shots" aria-hidden="true">{imgs}</div>'
 
 
@@ -238,7 +250,7 @@ def page_html(data, ui, code):
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0b0b12">
 <link rel="icon" type="image/png" href="/assets/img/apps/facelapse.png">
-<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="{asset_url("assets/css/styles.css")}">
 <script>try{{var t=localStorage.getItem('pn_theme');if(t)document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}</script>
 {redirect}
 <script type="application/ld+json">{jsonld(data, locales, code)}</script>
@@ -296,7 +308,7 @@ def page_html(data, ui, code):
   </div>
 </footer>
 
-<script src="/assets/js/app.js"></script>
+<script src="{asset_url("assets/js/app.js")}"></script>
 </body>
 </html>
 '''

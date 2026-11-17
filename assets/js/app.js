@@ -38,7 +38,27 @@
   // Script is loaded at the end of <body>, so the grid already exists — run now, before first paint.
   shuffleCards();
 
+  // Screenshot strips: load each data-src shot only when it scrolls (sideways)
+  // near the visible part of its strip. Native loading="lazy" fetches every
+  // image in a strip once the strip itself is near the viewport.
+  function lazyShots() {
+    const load = img => { img.src = img.dataset.src; img.removeAttribute("data-src"); };
+    const pending = document.querySelectorAll(".shots img[data-src]");
+    if (!("IntersectionObserver" in window)) { pending.forEach(load); return; }
+    const near = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      near.unobserve(e.target);
+      const strip = e.target;
+      const inStrip = new IntersectionObserver(xs => xs.forEach(x => {
+        if (x.isIntersecting) { inStrip.unobserve(x.target); load(x.target); }
+      }), { root: strip, rootMargin: "0px 50% 0px 0px" });  // ~one shot ahead
+      strip.querySelectorAll("img[data-src]").forEach(img => inStrip.observe(img));
+    }), { rootMargin: "600px 0px" });
+    document.querySelectorAll(".shots").forEach(s => near.observe(s));
+  }
+
   function wire() {
+    lazyShots();
     const themeBtn = $("#themeToggle");
     if (themeBtn) themeBtn.addEventListener("click", toggleTheme);
 
