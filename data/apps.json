@@ -100,7 +100,7 @@
    "package": "com.purplusnow.facelapse",
    "status": "live",
    "category": "entertainment",
-   "accent": "#6366F1",
+   "accent": "#2A197E",
    "icon": "assets/img/apps/facelapse.png",
    "playUrl": "https://play.google.com/store/apps/details?id=com.purplusnow.facelapse",
    "i18n": {
@@ -1581,7 +1581,7 @@
     }
    },
    "installs": 0,
-   "downloads": 100
+   "downloads": 500
   },
   {
    "id": "drakewing",
@@ -1674,7 +1674,7 @@
     }
    },
    "installs": 0,
-   "downloads": 0
+   "downloads": 1
   },
   {
    "id": "bloomdo",
