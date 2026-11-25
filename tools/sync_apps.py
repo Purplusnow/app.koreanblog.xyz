@@ -14,7 +14,10 @@ existing app's 16-locale copy from Play, and its icon/screenshots/accent
 when the icon changed. Play is the source of truth: hand edits to copy in
 data/apps.json get overwritten -- change the store listing instead.
 
-Usage:  python3 tools/sync_apps.py [--dry-run] [--refresh]
+--images implies --refresh and re-pulls every app's icon/screenshots
+regardless of whether the icon changed (catches screenshot-only changes).
+
+Usage:  python3 tools/sync_apps.py [--dry-run] [--refresh] [--images]
 """
 import colorsys, html, io, json, os, re, sys, urllib.request
 
@@ -52,8 +55,14 @@ SHOTS = 6
 
 def get(url, binary=False):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        b = r.read()
+    for attempt in range(3):  # Play/CDN occasionally stalls a read
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                b = r.read()
+            break
+        except (TimeoutError, OSError):
+            if attempt == 2:
+                raise
     return b if binary else b.decode("utf-8", "replace")
 
 
@@ -136,7 +145,8 @@ def save_images(app_id, en_page, icon=None):
     shot_dir = os.path.join(IMG, app_id)
     os.makedirs(shot_dir, exist_ok=True)
     shot_ids = list(dict.fromkeys(re.findall(
-        r"play-lh\.googleusercontent\.com/([A-Za-z0-9_-]+)=w526-h296", en_page)))[:SHOTS]
+        # some listings serve shots under a /pcsb/ path
+        r"play-lh\.googleusercontent\.com/((?:pcsb/)?[A-Za-z0-9_-]+)=w526-h296", en_page)))[:SHOTS]
     for n, sid in enumerate(shot_ids, 1):
         im = Image.open(io.BytesIO(get(f"https://play-lh.googleusercontent.com/{sid}=h400", binary=True)))
         save_shot(im, os.path.join(shot_dir, f"shot{n}.webp"))
@@ -177,7 +187,7 @@ def icon_changed(a, icon):
     return sum(ImageStat.Stat(ImageChops.difference(old, new)).mean) / 3 > 8
 
 
-def refresh_app(a, en_page, dry):
+def refresh_app(a, en_page, dry, force_images=False):
     """Re-pull copy (and images if the icon changed). Returns True if anything changed."""
     changed = False
     new = fetch_i18n(a["package"], en_page)
@@ -191,11 +201,13 @@ def refresh_app(a, en_page, dry):
                 a["i18n"][code] = copy
             changed = True
     icon = play_icon(en_page)
-    if icon_changed(a, icon):
+    redesigned = icon_changed(a, icon)
+    if force_images or redesigned:
         print(f"{a['id']}: icon/screenshots refreshed")
         if not dry:
             save_images(a["id"], en_page, icon)
-            a["accent"] = accent_from(icon)
+            if redesigned:  # keep a hand-picked accent when only re-pulling images
+                a["accent"] = accent_from(icon)
         changed = True
     return changed
 
@@ -223,7 +235,8 @@ def add_app(pkg, en_page, ids):
 
 def main():
     dry = "--dry-run" in sys.argv
-    refresh = "--refresh" in sys.argv
+    images = "--images" in sys.argv  # with --refresh: re-pull every app's icon/screenshots
+    refresh = "--refresh" in sys.argv or images
     data = json.load(open(APPS, encoding="utf-8"))
     apps = data["apps"]
     known = {a["package"] for a in apps}
@@ -242,7 +255,7 @@ def main():
         if st != a["status"]:
             print(f"{a['id']}: status {a['status']} -> {st}")
             a["status"], changed = st, True
-        if refresh and refresh_app(a, t, dry):
+        if refresh and refresh_app(a, t, dry, images):
             changed = True
 
     for pkg in dev_packages(data["developerUrl"]):
